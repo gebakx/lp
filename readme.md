@@ -1,0 +1,39 @@
+class: center, middle
+
+# Llenguatges de Programació
+
+<br>
+
+![:scale 50%](figures/logo-lp.png)<br><br>
+
+**Jordi Petit i Gerard Escudero**
+
+<br>
+
+![:scale 75%](figures/fib.png)
+
+---
+
+## Sumari
+
+- [Presentació del curs](presentacio.html) <br>
+.small[Objectius. Continguts. Professorat. Avaluació. Bibliografia.]
+
+- [Conceptes bàsics](conceptes.html) <br>
+.small[Introducció. Característiques. Història. Ús dels LPs. Paradigmes. Turing completesa. Sistemes d'execució. Sistemes de tipus. Exercicis.]
+
+- Fonaments: λ-càlcul
+
+- Programació funcional en Haskell
+
+- Inferència de tipus
+
+- Raonament equacional
+
+- Introducció a la compilació
+
+- Programació en Python
+
+- POO, herència i subtipus
+
+
