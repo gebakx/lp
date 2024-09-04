@@ -8,7 +8,7 @@ class: center, middle
 
 <br>
 
-**Jordi Petit i Gerard Escudero**
+**Jordi Petit**
 
 ![:scale 75%](figures/fib.png)
 
