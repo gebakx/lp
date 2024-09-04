@@ -13,7 +13,7 @@ class: center, middle
 ---
 class: left, middle, inverse
 
-## Sumari
+## Contingut
 
 - .cyan[Introducció]
 
@@ -190,7 +190,7 @@ en famílies, conèixer la seva història, estudiar els seus fonaments...
 ---
 class: left, middle, inverse
 
-## Sumari
+## Contingut
 
 - .brown[Introducció]
 
@@ -249,7 +249,7 @@ class: left, middle, inverse
 ---
 class: left, middle, inverse
 
-## Sumari
+## Contingut
 
 - .brown[Introducció]
 
@@ -653,7 +653,7 @@ end
 ---
 class: left, middle, inverse
 
-## Sumari
+## Contingut
 
 - .brown[Introducció]
 
@@ -745,7 +745,7 @@ Quins LPs estudiar/evitar?
 ---
 class: left, middle, inverse
 
-## Sumari
+## Contingut
 
 - .brown[Introducció]
 
@@ -1185,7 +1185,7 @@ Dummies*, P. Van Roy](https://www.info.ucl.ac.be/~pvr/VanRoyChapter.pdf)]
 ---
 class: left, middle, inverse
 
-## Sumari
+## Contingut
 
 - .brown[Introducció]
 
@@ -1266,7 +1266,7 @@ llenguatges Turing complets.
 ---
 class: left, middle, inverse
 
-## Sumari
+## Contingut
 
 - .brown[Introducció]
 
@@ -1316,7 +1316,7 @@ Sistemes mixtes:
 ---
 class: left, middle, inverse
 
-## Sumari
+## Contingut
 
 - .brown[Introducció]
 
@@ -1494,7 +1494,7 @@ La comprovació de tipus pot ser:
 ---
 class: left, middle, inverse
 
-## Sumari
+## Contingut
 
 - .brown[Introducció]
 

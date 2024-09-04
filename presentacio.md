@@ -15,7 +15,7 @@ class: center, middle
 ---
 class: left, middle, inverse
 
-## Sumari
+## Contingut
 
 - .cyan[Objectius]
 

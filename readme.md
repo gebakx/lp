@@ -14,7 +14,7 @@ class: center, middle
 
 ---
 
-## Sumari
+## Contingut
 
 - [Presentació del curs](presentacio.html) <br>
 .small[Objectius. Continguts. Professorat. Avaluació. Bibliografia.]
@@ -24,7 +24,8 @@ class: center, middle
 
 - Fonaments: λ-càlcul
 
-- Programació funcional en Haskell
+- [Programació funcional en Haskell](haskell.html) <br>
+.small[Introducció. Funcions d'ordre superior. Llistes per comprensió. Avaluació mandrosa. Tipus algebraics. Mònades.]
 
 - Inferència de tipus
 
