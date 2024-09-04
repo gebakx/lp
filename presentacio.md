@@ -17,16 +17,15 @@ class: left, middle, inverse
 
 ## Sumari
 
-- Objectius
+- .cyan[Objectius]
 
-- Continguts
+- .cyan[Continguts]
 
-- Professorat
+- .cyan[Professorat]
 
-- Avaluació
+- .cyan[Avaluació]
 
-- Bibliografia
-
+- .cyan[Bibliografia]
 
 ---
 
