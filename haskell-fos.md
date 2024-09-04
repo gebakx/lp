@@ -756,44 +756,6 @@ insert :: Dict -> String -> Int -> Dict
 
 ---
 
-# Diccionaris amb FOSs
-
-Volem definir un Diccionari de Strings a Ints amb
-valors per defecte
-usant funcions d'ordre superior.
-
-## Interfície
-
-```haskell
-type Dict = (String -> Int)     -- Defineix un tipus sinònim a la typedef
-
-create :: Int -> Dict
-search :: Dict -> String -> Int
-insert :: Dict -> String -> Int -> Dict
-```
-
-.cols5050[
-.col1[
-## Primera versió
-
-```haskell
-type Dict = (String -> Int)
-
-create def = \key -> def
-
-search dict key = dict key
-
-insert dict key value = \x ->
-    if key == x then value
-    else search dict x
-```
-]
-.col2[
-]
-]
-
----
-
 # Diccionaris
 
 Volem definir un TAD Diccionari de Strings a Ints amb
