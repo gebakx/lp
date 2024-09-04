@@ -738,24 +738,6 @@ class: left, middle, inverse
 
 ---
 
-# Diccionaris amb FOSs
-
-Volem definir un Diccionari de Strings a Ints amb
-valors per defecte
-usant funcions d'ordre superior.
-
-## Interfície
-
-```haskell
-type Dict = (String -> Int)     -- Defineix un tipus sinònim a la typedef
-
-create :: Int -> Dict
-search :: Dict -> String -> Int
-insert :: Dict -> String -> Int -> Dict
-```
-
----
-
 # Diccionaris
 
 Volem definir un TAD Diccionari de Strings a Ints amb
