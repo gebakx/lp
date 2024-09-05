@@ -23,12 +23,12 @@ class: center, middle
 - Sessió 3: [llistes infinites](haskell-lazy.html) <br>
 .small[Llistes per comprensió. Avaluació mandrosa. Llistes infinites. Exercicis.]
 
-- Sessió 4: tipus algebraics i classes <br>
-.small[Tipus algebraics. Aplicacions. Tipus genèrics predefinits. Classes. Exercicis.]
+- Sessió 4: [tipus algebraics i classes](haskell-tipus.html) <br>
+.small[Tipus. Tipus algebraics. Tipus genèrics predefinits. Classes. Exercicis.]
 
-- Sessió 5: mònades <br>
+- Sessió 5: [mònades](haskell-monades.html) <br>
 .small[Functors. Aplicatius. Mònades. Entrada/sortida. Exercicis.]
 
-- Sessió 6: més mònades <br>
+- Sessió 6: [més mònades](haskell-monades2.html) <br>
 .small[Mònade llista. Mònade estat. Combinació de mònades.]
 
