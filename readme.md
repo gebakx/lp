@@ -22,7 +22,8 @@ class: center, middle
 - [Conceptes bàsics](conceptes.html) <br>
 .small[Introducció. Característiques. Història. Ús dels LPs. Paradigmes. Turing completesa. Sistemes d'execució. Sistemes de tipus. Exercicis.]
 
-- Fonaments: λ-càlcul
+- [λ-càlcul](lambda-calcul.html) <br>
+.small[Introducció. Estructura bàsica. Codificacions de Church. Recursivitat. Universalitat. Calculadores.]
 
 - [Programació funcional en Haskell](haskell.html) <br>
 .small[Introducció. Funcions d'ordre superior. Llistes per comprensió. Avaluació mandrosa. Tipus algebraics. Mònades.]
