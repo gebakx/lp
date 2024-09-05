@@ -20,8 +20,8 @@ class: center, middle
 - Sessió 2: [funcions d'ordre superior](haskell-fos.html) <br>
 .small[Funcions d'ordre superior. Funcions d'ordre superior habituals. Aplicacions. Exercicis.]
 
-- Sessió 3: [llistes infinites]() <br>
-.small[Llistes per comprensió. Avaluació mandrosa. Exercicis.]
+- Sessió 3: [llistes infinites](haskell-lazy.html) <br>
+.small[Llistes per comprensió. Avaluació mandrosa. Llistes infinites. Exercicis.]
 
 - Sessió 4: tipus algebraics i classes <br>
 .small[Tipus algebraics. Aplicacions. Tipus genèrics predefinits. Classes. Exercicis.]
@@ -31,5 +31,4 @@ class: center, middle
 
 - Sessió 6: més mònades <br>
 .small[Mònade llista. Mònade estat. Combinació de mònades.]
-
 
