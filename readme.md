@@ -28,9 +28,8 @@ class: center, middle
 - [Programació funcional en Haskell](haskell.html) <br>
 .small[Introducció. Funcions d'ordre superior. Llistes per comprensió. Avaluació mandrosa. Tipus algebraics. Mònades.]
 
-- Inferència de tipus
-
-- Raonament equacional
+- [Raonament equacional](raonament.html) <br>
+.small[]
 
 - Introducció a la compilació
 
@@ -38,4 +37,6 @@ class: center, middle
 
 - POO, herència i subtipus
 
+- [Inferència de tipus](inferencia-tipus.html) <br>
+.small[]
 
