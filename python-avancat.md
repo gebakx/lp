@@ -562,7 +562,7 @@ temps(s): 0.000036
 
 # Clausures
 
-Una clausura (*closure*) és una mena funció *callback*. 
+Una clausura (*closure*) és una mena funció *callback* que té accés a l'*scope* lèxic.
 
 ```python3
 def test(n):
