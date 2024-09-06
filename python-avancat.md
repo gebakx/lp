@@ -21,6 +21,8 @@ class: left, middle, inverse
 
 - *Lazyness*
 
+- Memorització
+
 - Clausures
 
 - Decoradors
@@ -129,6 +131,8 @@ class: left, middle, inverse
 - .cyan[Tipus algebraics]
 
 - *Lazyness*
+
+- Memorització
 
 - Clausures
 
@@ -281,6 +285,8 @@ class: left, middle, inverse
 - .brown[Tipus algebraics]
 
 - .cyan[*Lazyness*]
+
+- Memorització
 
 - Clausures
 
@@ -460,7 +466,9 @@ class: left, middle, inverse
 
 - .brown[*Lazyness*]
 
-- .cyan[Clausures]
+- .cyan[Memorització]
+
+- Clausures
 
 - Decoradors
 
@@ -557,12 +565,54 @@ f(40) = 102334155
 temps(s): 0.000036
 ```
 
+---
+class: left, middle, inverse
+
+## Contingut
+
+- .brown[Classes]
+
+- .brown[Tipus algebraics]
+
+- .brown[*Lazyness*]
+
+- .brown[Memorització]
+
+- .cyan[Clausures]
+
+- Decoradors
+
+- Exercicis
 
 ---
 
 # Clausures
 
-Una clausura (*closure*) és una mena funció *callback* que té accés a l'*scope* lèxic.
+Al retornar funcions es creen clausures (*closure*):
+- tanca l'abast (*scope*) lèxic del voltant i captura els sus valors.
+
+.cols5050[
+.col1[
+```clojure
+def interna(x):
+    return lambda y: print(x, y, "!")
+    
+externa = interna("Hola")
+
+externa("món")  👉  Hola món !
+```
+
+Fixeu-vos en que si la funció interna tornés només una funció, no funcionaria.
+]
+.col2[
+![:scale 105%](figures/clausura.png)
+
+.small[diagrama: [Python Tutor](https://pythontutor.com)]
+]]
+
+---
+
+# Memorització amb clausures
 
 ```python3
 def test(n):
@@ -584,10 +634,9 @@ test40(efib)
 👉
 f(40) = 102334155
 temps(s): 0.000036
-
 ```
 
-S'utilitzen per amagar dades (*data hiding*) i evitar així les variables globals.
+El·liminem la necessitat de variables globals.
 
 ---
 
@@ -632,6 +681,8 @@ class: left, middle, inverse
 - .brown[Tipus algebraics]
 
 - .brown[*Lazyness*]
+
+- .brown[Memorització]
 
 - .brown[Clausures]
 
@@ -765,6 +816,8 @@ class: left, middle, inverse
 - .brown[Tipus algebraics]
 
 - .brown[*Lazyness*]
+
+- .brown[Memorització]
 
 - .brown[Clausures]
 
