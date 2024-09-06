@@ -14,7 +14,7 @@ class: center, middle
 
 ---
 
-## Contingut
+## Contingut (1/2)
 
 - [Presentació del curs](presentacio.html) <br>
 .small[Objectius. Continguts. Professorat. Avaluació. Bibliografia.]
@@ -29,11 +29,16 @@ class: center, middle
 .small[Introducció. Funcions d'ordre superior. Llistes per comprensió. Avaluació mandrosa. Tipus algebraics. Mònades.]
 
 - [Raonament equacional](raonament.html) <br>
-.small[]
+.small[Introducció. Base. Inducció. Inducció amb arbres. Millora eficiència. Sumari. Exercicis.]
 
 - Introducció a la compilació
 
-- Programació en Python
+---
+
+## Contingut (2/2)
+
+- [Programació en Python](python.html) <br>
+.small[Elements bàsics. Part funcional. Classes. Lazyness. Tipus algebraics. Clausures. Decoradors. Compiladors.]
 
 - POO, herència i subtipus
 
