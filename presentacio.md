@@ -154,5 +154,7 @@ Ullman, J.D, Addison-Wesley, 2007.
 - *Razonando con Haskell: un curso sobre programación funcional*. Ruiz Jiménez, B.C,
 Thomson-Paraninfo, 2004.
 
+- *Learn You Haskell for a Great Good*. Miran Lipovaĉa. .small[[Disponible online](http://learnyouahaskell.com/).]
+
 - *Think Python*. Downey, B. O'Reilly, 2015. .small[[Disponible online](https://greenteapress.com/wp/think-python-2e/).]
 
