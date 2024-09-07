@@ -41,7 +41,8 @@ class: center, middle
 - [Programació en Python](python.html) <br>
 .small[Elements bàsics. Part funcional. Classes. Lazyness. Tipus algebraics. Clausures. Decoradors. Compiladors.]
 
-- POO, herència i subtipus
+- [POO, vinculació, subtipus i variancia](subtipus.html) <br>
+.small[Herència. Declaració de subclases. Vinculació. Subtipus i variancia de tipus.]
 
 - [Inferència de tipus](inferencia-tipus.html) <br>
 .small[]
