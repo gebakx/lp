@@ -45,5 +45,5 @@ class: center, middle
 .small[Herència. Declaració de subclases. Vinculació. Subtipus i variancia de tipus.]
 
 - [Inferència de tipus](inferencia-tipus.html) <br>
-.small[]
+.small[Introducció. Algorisme de Milner. Exercicis.]
 
