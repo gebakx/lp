@@ -47,3 +47,4 @@ class: center, middle
 - [Inferència de tipus](inferencia-tipus.html) <br>
 .small[Introducció. Algorisme de Milner. Exercicis.]
 
+- [Treball dirigit](treball.html)
