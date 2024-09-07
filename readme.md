@@ -31,7 +31,8 @@ class: center, middle
 - [Raonament equacional](raonament.html) <br>
 .small[Introducció. Base. Inducció. Inducció amb arbres. Millora eficiència. Sumari. Exercicis.]
 
-- Introducció a la compilació
+- [Introducció a la compilació](compis.html) <br>
+.small[Introducció. Visió general. Anàlisi lèxica. Anàlisi sintàctica. Arbres de sintaxi abstracta. Anàlisi semàntica. Interpretació. ]
 
 ---
 
