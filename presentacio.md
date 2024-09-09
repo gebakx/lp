@@ -130,11 +130,11 @@ del curs.
 
 - Treballs:
 
-    - Lliurament pràctica: dt 7 de gener (08:00)
+    - Lliurament pràctica: dt 8 de gener (08:00)
 
-    - Lliurament treball dirigit: dl 2 de desembre (08:00)
+    - Lliurament treball dirigit: dl 18 de desembre (08:00)
 
-    - Correcció treball dirigit: dl 20 de desembre (08:00)
+    - Correcció treball dirigit: dl 8 de gener (08:00)
 
 ---
 
