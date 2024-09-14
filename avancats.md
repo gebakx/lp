@@ -2031,12 +2031,6 @@ class: left, middle, inverse
 
 - .cyan[Concurrència]
 
----
 
-# Concurrència
 
-- teoria
 
-- [Async + CPS](https://expression.readthedocs.io/en/latest/tutorial/continuations.html)
-
-- async i telegram
