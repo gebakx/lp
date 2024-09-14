@@ -31,20 +31,20 @@ class: center, middle
 - [Raonament equacional](raonament.html) <br>
 .small[Introducció. Base. Inducció. Inducció amb arbres. Millora eficiència. Sumari. Exercicis.]
 
-- [Introducció a la compilació](compis.html) <br>
-.small[Introducció. Visió general. Anàlisi lèxica. Anàlisi sintàctica. Arbres de sintaxi abstracta. Anàlisi semàntica. Interpretació. ]
-
 ---
 
 ## Contingut (2/2)
 
-- [Programació en Python](python.html) <br>
-.small[Elements bàsics. Part funcional. Classes. Lazyness. Tipus algebraics. Clausures. Decoradors. Compiladors.]
+- [Introducció a la compilació](compis.html) <br>
+.small[Introducció. Visió general. Anàlisi lèxica. Anàlisi sintàctica. Arbres de sintaxi abstracta. Anàlisi semàntica. Interpretació. ]
 
-- [POO, vinculació, subtipus i variancia](subtipus.html) <br>
-.small[Herència. Declaració de subclases. Vinculació. Subtipus i variancia de tipus.]
+- [Programació en Python](python.html) <br>
+.small[Elements bàsics. Part funcional. Classes. Lazyness. Tipus algebraics. Compiladors.]
 
 - [Inferència de tipus](inferencia-tipus.html) <br>
 .small[Introducció. Algorisme de Milner. Exercicis.]
+
+- [Conceptes avançats](avancats.html) <br>
+.small[Recursivitat. Orientació a objectes. Subtipus i variancia de tipus. Clausures. Concurrència.]
 
 - [Treball dirigit](treball.html)

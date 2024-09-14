@@ -18,7 +18,7 @@ class: center, middle
 .small[Elements bàsics. Part funcional. Exercicis.]
 
 - Sessió 2: [Python avançat](python-avancat.html) <br>
-.small[Classes. Tipus algebraics. Lazyness. Clausures. Decoradors. Exercicis.]
+.small[Classes. Tipus algebraics. Lazyness. Exercicis.]
 
 - Sessió 3: [Compiladors](python-compis.html) <br>
 .small[Compiladors amb ANTLR. Exercicis.]
