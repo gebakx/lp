@@ -61,9 +61,11 @@ Tradicionalment, els LPs es consideren des de tres angles
 
 La majoria d'LPs venen definits per
 
-- una especificació estàndard, o
+- una especificació estàndard <br>
+.small[ex: The C Programming Language, 1978]
 
-- una implementació de referència.
+- una implementació de referència <br>
+.small[ex: Standard ML]
 
 ---
 
@@ -505,7 +507,7 @@ Desenvolupat per John McCarthy al MIT per a recerca en IA.
 
 Idees principals:
 
-- Sintàxi uniforme
+- Sintaxi uniforme
 - Funcions (composició i recursivitat)
 - Llistes
 - Expressions simbòliques
@@ -810,7 +812,7 @@ Paradigmes comuns:
 
 # Paradigma imperatiu
 
-Caràcteristiques:
+Característiques:
 
 - Noció d'estat
 
@@ -854,11 +856,11 @@ Subclassificacions:
 
 # Paradigma declaratiu
 
-Caràcteristiques:
+Característiques:
 
 - Llenguatges descriptius.
 
-- El programa diu què s'ha de fer, però no necessariament com.
+- El programa diu què s'ha de fer, però no necessàriament com.
 
 Utilitat:
 
@@ -941,7 +943,7 @@ Subclasificacions:
 
 # Paradigma funcional
 
-Caràcteristiques:
+Característiques:
 
 - Procedural
 
@@ -1007,7 +1009,7 @@ Conceptes clau:
 
 # Paradigma OO
 
-Caràcteristiques:
+Característiques:
 
 - Es basa en *objectes* (atributs + mètodes) i potser *classes*.
 
@@ -1029,7 +1031,7 @@ Molts LPs combinen diferents paradigmes. Per exemple:
 - OCaml: **funcional** + imperatiu + orientat a objectes
 
 
-Alguns LPs incorporen caràcteristiques d'altres paradigmes:
+Alguns LPs incorporen característiques d'altres paradigmes:
 
 - Prolog: **lògic** (+ imperatiu + funcional)
 
@@ -1222,7 +1224,7 @@ class: left, middle, inverse
 - Funció de transició (estat, símbol ⟶ estat, símbol, moviment)
 ]]
 .col2[
-**λ-càlcul**: .small[odel matemàtic de càlcul funcional molt simple. <br/> (Alonzo Church, 1936).]
+**λ-càlcul**: .small[model matemàtic de càlcul funcional molt simple. <br/> (Alonzo Church, 1936).]
 
 ![:scale 40%](figures/conceptes/lambda2.png)
 ![:scale 35%](figures/conceptes/alonzo-church.jpg)

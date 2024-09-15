@@ -97,7 +97,7 @@ if condicio:
 
 L'estil estàndard *PEP8* es marcar-ho amb 4 espais.
 
-### Línies llarges
+### Línies llargues
 
 Podem tallar línies amb `\`:
 ```python3
@@ -139,7 +139,7 @@ a += 3
 
 Són tipus i funcions de conversió.
 
-`int` no té rang. Pot tractar nombres arbitrariàment llargs.
+`int` no té rang. Pot tractar nombres arbitràriament llargs.
 
 Operadors usuals excepte: `**` (potència) i `//` (divisió entera)
 
@@ -346,7 +346,7 @@ z = ["hola",5,"llenguatge",6.63,2]
 
 Tenen les mateixes operacions que els *strings* i també són *iterables*.
 
-Per recorrer dos o més iterables podem utilitzar el `zip`:
+Per recórrer dos o més iterables podem utilitzar el `zip`:
 ```python3
 def prodEscalar(v, w):
     res = 0
@@ -570,9 +570,9 @@ factorials = lambda n: accumulate(range(1, n + 1), mul)
 
 Altres funcions amb equivalents Haskell són: `dropwhile`, `islice` (`take`),`repeat` o `takewhile`.
 
-Té algunes funcions que fan d'iteradors combinatòrics: `product`, `permutations`, `combinations` o `combinations_with_replacement`.
+Té algunes funcions que fan d'iteradors combinatoris: `product`, `permutations`, `combinations` o `combinations_with_replacement`.
 
-És interessant fer un repàs a la documentacio d'aquesta llibreria:
+És interessant fer un repàs a la documentació d'aquesta llibreria:
 https://docs.python.org/3.7/library/itertools.html
 
 ---

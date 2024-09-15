@@ -157,7 +157,7 @@ $$
 $$
 on $f$ i $x$ són dos termes.
 
-  *Intuició:*
+  *Intuïció:*
 $
     f(x)
 $
@@ -697,7 +697,7 @@ Funcions:
 <br>
 
 S'utilitza una funció $oneZero$ per generar parells amb almenys un zero (amb recursivitat, $Y$). <br>
-Totes les funcions aritmètiques es generen tenin el compte els parells.
+Totes les funcions aritmètiques es generen tenint el compte els parells.
 
 <br>
 

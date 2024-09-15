@@ -446,7 +446,7 @@ Aniria bé tenir l'operador `>>=` per encadenar els *triggers*.
 ---
 # Mònada State
 
-La mònada *State* encapçula una estructura de dades en forma d'estat.
+La mònada *State* encapsula una estructura de dades en forma d'estat.
 
 **El tipus _State_**
 
@@ -731,7 +731,7 @@ runState (mapM exec l) []
 👉  ([Just 3,Just 5],[("a",Just 3)])
 ```
 
-**Un altre example**
+**Un altre exemple**
 
 ```haskell
 let l = [View (Val 2), Ass "a" (Val 3), View (Add (Var "a") (Val 2))]

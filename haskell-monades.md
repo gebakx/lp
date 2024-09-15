@@ -228,7 +228,7 @@ i `(->)` compleixen les lleis dels functors.
 
 # Arbres binaris com a functors
 
-Instànciació pròpia dels functors pels arbres binaris:
+Instanciació pròpia dels functors pels arbres binaris:
 
 ```haskell
 data Arbin a
@@ -720,7 +720,7 @@ etiqueta nom =
 
 # Funcions predefinides per a mònades
 
-Moltes funcions predefinides tenen una extnsió per la classe `Monad`:
+Moltes funcions predefinides tenen una extensió per la classe `Monad`:
 
 -   `mapM`, `filterM`, `foldM`, `zipWithM`, ...
 
@@ -753,7 +753,7 @@ O fer-ho directament:
 # Sumari (1)
 
 
-- Les mònades pemeten aplicar una funció que retorna un valor en un contenidor
+- Les mònades permeten aplicar una funció que retorna un valor en un contenidor
 a un valor en un contenidor.
 
 .center[
@@ -960,7 +960,7 @@ main = do
 
 ---
 
-# Intuició sobre la mònada `IO`
+# Intuïció sobre la mònada `IO`
 
 Entrada/sortida com funcions
 que modifiquen el món: `món1 ⟿ món2`.
@@ -995,7 +995,7 @@ myMain w0 = let (w1, c1) = myGetChar w0
 
 ---
 
-# Intuició sobre la mònada `IO`
+# Intuïció sobre la mònada `IO`
 
 Entrada/sortida com funcions
 que modifiquen el món: `món1 ⟿ món2`.
@@ -1046,7 +1046,7 @@ main =
 
 ---
 
-# Intuició sobre la mònada `IO`
+# Intuïció sobre la mònada `IO`
 
 Entrada/sortida com funcions
 que modifiquen el món: `món1 ⟿ món2`.
@@ -1138,7 +1138,7 @@ Estat: 💩
 <br>Sense estat: 💜
 
 Les mònades no eliminen la noció d'estat en un programa,
-però elimimen la necessitat de mencionar-lo.
+però eliminen la necessitat de mencionar-lo.
 
 ---
 class: left, middle, inverse

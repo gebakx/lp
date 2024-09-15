@@ -60,13 +60,13 @@ class: left, middle, inverse
 
 ---
 
-# Llistes per comprehensió
+# Llistes per comprensió
 
 
-Una **llista per comprehensió** és una construcció per crear, filtrar i combinar
+Una **llista per comprensió** és una construcció per crear, filtrar i combinar
 llistes.
 
-Sintàxi semblant a la notació matemàtica de construcció de conjunts.
+Sintaxi semblant a la notació matemàtica de construcció de conjunts.
 
 <br>
 
@@ -88,7 +88,7 @@ Ternes pitagòriques en Haskell (fins a `n`):
 
 ---
 
-# Llistes per comprehensió
+# Llistes per comprensió
 
 Ús bàsic: expressió amb generador (semblant a `map`)
 
@@ -123,7 +123,7 @@ Introducció de noms
 
 ---
 
-# Llistes per comprehensió
+# Llistes per comprensió
 
 
 Compte amb l'ordre
@@ -211,7 +211,7 @@ per obtenir els elements necessaris.
 
 - Això provoca cert indeterminisme en com s'executa.
 
-- Ineficiència(?). Depen del compilador i depen del cas.
+- Ineficiència(?). Depèn del compilador i depèn del cas.
 
 - Permet tractar estructures potencialment molt grans o "infinites".
 

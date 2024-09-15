@@ -450,7 +450,7 @@ class: left, middle, inverse
 
 # Semàntica
 
-La **semàntica** d'un LP descriu què significa un programa ben construit.
+La **semàntica** d'un LP descriu què significa un programa ben construït.
 
 
 ```python
@@ -498,7 +498,7 @@ A vegades, les construccions sintàcticament correctes poden ser ambigües.
 Han posat un banc a la plaça.
 ```
 
-> ➡️  sintàcticament correcta en català, però ambigüa.
+> ➡️  sintàcticament correcta en català, però ambigua
 
 
 <br>

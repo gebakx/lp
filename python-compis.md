@@ -166,7 +166,7 @@ line 1:3 missing NUM at '<EOF>'
 
 ## Obtenció de l'entrada
 
-#### una única linia
+#### una única línia
 ```python3
 input_stream = InputStream(input('? '))
 ```
@@ -305,7 +305,7 @@ La crida a `self.visit(node)` visita el visitador associat al tipus de `node`.
 
 ---
 
-## Visitor per recorrer l'arbre
+## Visitor per recórrer l'arbre
 
 Classe *visitor* `TreeVisitor.py` per mostrar l'arbre heretant de la classe base:
 

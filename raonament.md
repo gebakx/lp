@@ -353,7 +353,7 @@ reverse (x:xs) = reverse xs ++ [x]
 
 🅱️ Cas inductiu: `xs = z:zs`.
 
-Hipotesi d'inducció: `(reverse . reverse) zs = id zs`
+Hipòtesi d'inducció: `(reverse . reverse) zs = id zs`
 
 ```haskell
 (reverse . reverse) xs =
@@ -682,8 +682,8 @@ add      :: Nat -> Nat -> Nat     -- no es pot usar la suma d'Ints!.
 - Demostreu que `intToNat` i `natToInt` són inverses l'una de l'altra.
 - Demostreu que `Z` és element neutre (per la dreta i per l'esquerra) de `add`.
 - Demostreu que `add (S x) y  =  add x (S y)`.
-- Demotreu l'associativitat de `add`.
-- Demotreu la commutativitat de `add`.
+- Demostreu l'associativitat de `add`.
+- Demostreu la commutativitat de `add`.
 
 ---
 

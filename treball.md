@@ -15,7 +15,7 @@ class: center, middle
 # Treball dirigit
 
 El treball dirigit consisteix en preparar un vídeo i un document escrit sobre
-les capacitats i límits de fer programació funcional en un llenguatge de programació impoeratiu.
+les capacitats i límits de fer programació funcional en un llenguatge de programació imperatiu
 
 L'objectiu és satisfer les competències transversals de l'assignatura:
 <br>
@@ -78,7 +78,7 @@ Per identificar l'LP imperatiu del vostre treball, calculeu el vostre DNI mòdul
 
 <br>
 
-**Nota:** Donat que aquests terminis s'han publicat amb molta antel·lació, no s'acceptaràn lliuraments amb retard.
+**Nota:** Donat que aquests terminis s'han publicat amb molta antelació, no s'acceptaràn lliuraments amb retard.
 
 
 ---
@@ -121,11 +121,11 @@ Per identificar l'LP imperatiu del vostre treball, calculeu el vostre DNI mòdul
 
 -  Vídeo i primera part del document:
 
-    - Doneu una breu descripció i propòsit de l'LP imperatiu que us ha tocat, utilitzant conceptes introduits al curs com ara paradigma, sistema d'execució, sistema de tipus, etc.
+    - Doneu una breu descripció i propòsit de l'LP imperatiu que us ha tocat, utilitzant conceptes introduïts al curs com ara paradigma, sistema d'execució, sistema de tipus, etc.
 
     - Expliqueu els elements de programació funcional disponibles en aquest LP. Com a exemple, mireu els <a href='https://www.cs.upc.edu/~jpetit/LP/09-fp-c++.html'>elements de programació funcional que hi ha en C++</a>.
 
-    - Exposeu de forma informada, raonada i crítica les seves capacitats i límitacions d'aquests elements de programació funcional dins de l'LP imperatiu.
+    - Exposeu de forma informada, raonada i crítica les seves capacitats i limitacions d'aquests elements de programació funcional dins de l'LP imperatiu.
 
 ---
 
@@ -172,7 +172,7 @@ a l'alta o a la baixa.
 - Els professors també podran corregir d'ofici treballs arbitraris
 i canviar-ne les qualificacions.
 
-- Els professors penalitzaran als estudiants que avaluin de forma
+- Els professors penalitzaran als estudiants que avaluïn de forma
 manifestament incorrecta als seus companys.
 
 
@@ -197,7 +197,7 @@ El sistema Mussol és nou, si hi trobeu cap problema, sisplau contacteu amb els 
 
 Els repetidors poden reusar les seves notes del TD del curs passat.
 
-Per a fer-ho, només cal que **no** enviin el seu treball. Si hi participen, vol dir que
+Per a fer-ho, només cal que **no** enviïn el seu treball. Si hi participen, vol dir que
 tornen a fer tot el treball dirigit (enviament i correccions) i rebutgen la nota
 anterior.
 

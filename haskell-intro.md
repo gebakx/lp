@@ -280,7 +280,7 @@ Apunteu-vos al curs "Problems in Haskell" de [Jutge.org](https://jutge.org).
 |:---|:---|:---|
 | `:load` | `:l arxiu` | càrrega un script |
 | `:quit` | `:q` | sortida de l'intèrpret |
-| `:reload` | `:r` | recàrrega l'últim arxiu carregat |
+| `:reload` | `:r` | recarrega l'últim arxiu carregat |
 | `:type` | `:t 3` | tipus de l'expressió |
 | `:info` | `:i []` | informació associada al paràmetre (útil a partir del tema de classes) |
 | `:sprint` | | visualització dels *thunks* (útil per l'avaluació mandrosa) |
@@ -450,7 +450,7 @@ max :: Ord a => a -> a -> a
 ```
 
 
-màxim comú divisor, mínim comú multiple:
+màxim comú divisor, mínim comú múltiple:
 ```haskell
 gcd :: Integral a => a -> a -> a
 lcm :: Integral a => a -> a -> a
@@ -784,7 +784,7 @@ snd (3, "rave")         👉 "rave"
 <br>
 
 Per a tuples generals, no hi ha definides funcions d'accés
-<br>⇒ Es poden crear facilment usant patrons:
+<br>⇒ Es poden crear fàcilment usant patrons:
 .cols5050[
 .col1[
 ```haskell
@@ -968,18 +968,18 @@ variables de $e_1$ que la fan igual que $e_2$.
 **Exemples**:
 
 - `x:xs` *matches* `[2, 5, 8]` perquè `[2, 5, 8]` és `2 : (5 : 8 : [])`
-  substituïnt `x` amb `2` i `xs` amb `(5 : 8 : [])`
+  substituint `x` amb `2` i `xs` amb `(5 : 8 : [])`
   que és `[5, 8]`.
 
 - `x:xs` *does not match* `[]` perquè `[]` i `:` són constructors
   diferents.
 
 - `x1:x2:xs` *matches* `[2, 5, 8]`
-  substituïnt `x1` amb `2`, `x2` amb `5`
+  substituint `x1` amb `2`, `x2` amb `5`
   i `xs` amb `[8]`.
 
 - `x1:x2:xs` *matches* `[2, 5]`
-  substituïnt `x1` amb `2`, `x2` amb `5`
+  substituint `x1` amb `2`, `x2` amb `5`
   i `xs` amb `[]`.
 
 **Nota:** El mecanisme de *matching* no és el mateix que el d'*unificació*
@@ -1018,7 +1018,7 @@ primerIsegon llista =
 Els textos (*strings*) en Haskell són llistes de caràcters.
 
 El tipus `String` és una sinònim de `[Char]`.<br>
-Les cometes dobles són sucre sintàtic per definir textos.
+Les cometes dobles són sucre sintàctic per definir textos.
 
 
 ```haskell

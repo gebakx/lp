@@ -323,7 +323,7 @@ Algunes funcions d'ordre superior predefined s'utilitzen molt habitualment:
 
 - Descripció:
 
-    `id` és la funció identitat. També sembla inútil, pero va bé en algun moment.
+    `id` és la funció identitat. També sembla inútil, però va bé en algun moment.
 
 - Exemples:
 

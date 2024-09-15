@@ -2,7 +2,7 @@ class: center, middle
 
 ### Llenguatges de Programació
 
-## POO, vinculació, subtipus i variancia
+## POO, vinculació, subtipus i variància
 
 ![:scale 20%](figures/subtipus.png)<br><br>
 
@@ -21,13 +21,13 @@ class: left, middle, inverse
 
 - Vinculació
 
-- Subtipus i variancia de tipus
+- Subtipus i variància de tipus
 
 ---
 
 # Programació orientada a objectes
 
-Elements principals de la PPO:
+Elements principals de la POO:
 
 - Reutilització de codi
 
@@ -225,7 +225,7 @@ class: left, middle, inverse
 
 - Vinculació
 
-- Subtipus i variancia de tipus
+- Subtipus i variància de tipus
 
 ---
 
@@ -532,7 +532,7 @@ class: left, middle, inverse
 
 - .cyan[Vinculació]
 
-- Subtipus i variancia de tipus
+- Subtipus i variància de tipus
 
 ---
 
@@ -832,7 +832,7 @@ gat.filar();      👉 rum-rum
 animal.filar()    ❌ error compilació
 ```
 
-*️⃣ Com que `parlarN` reb un `Animal` per còpia, al cridar `parlarN(gat, 3)` es perd la part de gat.
+*️⃣ Com que `parlarN` rep un `Animal` per còpia, al cridar `parlarN(gat, 3)` es perd la part de gat.
 
 ]]
 
@@ -881,7 +881,7 @@ gat.filar();      👉 rum-rum
 animal.filar()    ❌ error compilació
 ```
 
-*️⃣ Com que `parlarN` reb un punter a `Animal`, al cridar `parlarN(gat, 3)` el tipus dinàmic continua sent `Gat`.
+*️⃣ Com que `parlarN` rep un punter a `Animal`, al cridar `parlarN(gat, 3)` el tipus dinàmic continua sent `Gat`.
 
 ]]
 
@@ -929,7 +929,7 @@ gat.filar();      👉 rum-rum
 animal.filar()    ❌ error compilació
 ```
 
-*️⃣ Com que `parlarN` reb un `Animal` per referència, al cridar `parlarN(gat, 3)` el tipus dinàmic continua sent `Gat`.
+*️⃣ Com que `parlarN` rep un `Animal` per referència, al cridar `parlarN(gat, 3)` el tipus dinàmic continua sent `Gat`.
 
 ]]
 
@@ -983,7 +983,7 @@ class: left, middle, inverse
 
 - .brown[Vinculació]
 
-- .cyan[Subtipus i variancia de tipus]
+- .cyan[Subtipus i variància de tipus]
 
 ---
 
@@ -1212,7 +1212,7 @@ Exemples:
 
 ---
 
-# Variancia de constructors de tipus
+# Variància de constructors de tipus
 
 Sigui `C` un constructor de tipus i sigui `s <= t`.
 

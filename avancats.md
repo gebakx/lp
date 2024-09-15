@@ -25,7 +25,7 @@ class: left, middle, inverse
 
 - Orientació a Objectes
 
-- Subtipus i variancia de tipus
+- Subtipus i variància de tipus
 
 - Clausures
 
@@ -61,7 +61,7 @@ def f_tailrec(n, resultat = 1):
 ```
 ]]
 
-- **Tail Recursion Optimization**: optimització en que el compilador sustitueix la crida per recursiva per un salt. 
+- **Tail Recursion Optimization**: optimització en que el compilador substitueix la crida per recursiva per un salt. 
 
 - Python no ho suporta:
 
@@ -173,7 +173,7 @@ class: left, middle, inverse
 
 - Orientació a Objectes
 
-- Subtipus i variancia de tipus
+- Subtipus i variància de tipus
 
 - Clausures
 
@@ -285,7 +285,7 @@ class: left, middle, inverse
 
 - Orientació a Objectes
 
-- Subtipus i variancia de tipus
+- Subtipus i variància de tipus
 
 - Clausures
 
@@ -366,7 +366,7 @@ class: left, middle, inverse
 
   - Vinculació
 
-- Subtipus i variancia de tipus
+- Subtipus i variància de tipus
 
 - Clausures
 
@@ -376,7 +376,7 @@ class: left, middle, inverse
 
 # Programació orientada a objectes
 
-Elements principals de la PPO:
+Elements principals de la POO:
 
 - Reutilització de codi
 
@@ -462,7 +462,7 @@ class Comptable extends Empleat {
 
 # Herència i subclasses
 
-A cada subclasse es poden redefinir operacions de la classe base.
+A cada subclasse es poden re definir operacions de la classe base.
 
 ```typescript
 class Empleat {
@@ -578,7 +578,7 @@ class: left, middle, inverse
 
   - Vinculació
 
-- Subtipus i variancia de tipus
+- Subtipus i variància de tipus
 
 - Clausures
 
@@ -893,7 +893,7 @@ class: left, middle, inverse
 
   - .cyan[Vinculació]
 
-- Subtipus i variancia de tipus
+- Subtipus i variància de tipus
 
 - Clausures
 
@@ -1197,7 +1197,7 @@ gat.filar();      👉 rum-rum
 animal.filar()    ❌ error compilació
 ```
 
-*️⃣ Com que `parlarN` reb un `Animal` per còpia, al cridar `parlarN(gat, 3)` es perd la part de gat.
+*️⃣ Com que `parlarN` rep un `Animal` per còpia, al cridar `parlarN(gat, 3)` es perd la part de gat.
 
 ]]
 
@@ -1246,7 +1246,7 @@ gat.filar();      👉 rum-rum
 animal.filar()    ❌ error compilació
 ```
 
-*️⃣ Com que `parlarN` reb un punter a `Animal`, al cridar `parlarN(gat, 3)` el tipus dinàmic continua sent `Gat`.
+*️⃣ Com que `parlarN` rep un punter a `Animal`, al cridar `parlarN(gat, 3)` el tipus dinàmic continua sent `Gat`.
 
 ]]
 
@@ -1294,7 +1294,7 @@ gat.filar();      👉 rum-rum
 animal.filar()    ❌ error compilació
 ```
 
-*️⃣ Com que `parlarN` reb un `Animal` per referència, al cridar `parlarN(gat, 3)` el tipus dinàmic continua sent `Gat`.
+*️⃣ Com que `parlarN` rep un `Animal` per referència, al cridar `parlarN(gat, 3)` el tipus dinàmic continua sent `Gat`.
 
 ]]
 
@@ -1346,7 +1346,7 @@ class: left, middle, inverse
 
 - .brown[Orientació a Objectes]
 
-- .cyan[Subtipus i variancia de tipus]
+- .cyan[Subtipus i variància de tipus]
 
 - Clausures
 
@@ -1450,7 +1450,7 @@ perquè ser-ho d'acord amb la Def.&nbsp;1.
 
 **Definició 3:**
 
-`s` és subtipus de `t` si tots els objectes de `s` es poden convertir implícitament a objectes de `t` (*type casting* o coherció). 
+`s` és subtipus de `t` si tots els objectes de `s` es poden convertir implícitament a objectes de `t` (*type casting* o coerció). 
 <br>
 
 
@@ -1580,7 +1580,7 @@ Exemples:
 
 ---
 
-# Variancia de constructors de tipus
+# Variància de constructors de tipus
 
 Sigui `C` un constructor de tipus i sigui `s <= t`.
 
@@ -1610,7 +1610,7 @@ class: left, middle, inverse
 
 - .brown[Orientació a Objectes]
 
-- .brown[Subtipus i variancia de tipus]
+- .brown[Subtipus i variància de tipus]
 
 - .cyan[Clausures]
 
@@ -1629,7 +1629,7 @@ class: left, middle, inverse
 # Clausures
 
 Al retornar funcions es creen clausures (*closure*):
-- tanca l'abast (*scope*) lèxic del voltant i captura els sus valors.
+- tanca l'abast (*scope*) lèxic del voltant i captura els seus valors.
 
 .cols5050[
 .col1[
@@ -1660,7 +1660,7 @@ class: left, middle, inverse
 
 - .brown[Orientació a Objectes]
 
-- .brown[Subtipus i variancia de tipus]
+- .brown[Subtipus i variància de tipus]
 
 - .cyan[Clausures]
 
@@ -1741,7 +1741,7 @@ class: left, middle, inverse
 
 - .brown[Orientació a Objectes]
 
-- .brown[Subtipus i variancia de tipus]
+- .brown[Subtipus i variància de tipus]
 
 - .cyan[Clausures]
 
@@ -1793,7 +1793,7 @@ class: left, middle, inverse
 
 - .brown[Orientació a Objectes]
 
-- .brown[Subtipus i variancia de tipus]
+- .brown[Subtipus i variància de tipus]
 
 - .cyan[Clausures]
 
@@ -1877,7 +1877,7 @@ class: left, middle, inverse
 
 - .brown[Orientació a Objectes]
 
-- .brown[Subtipus i variancia de tipus]
+- .brown[Subtipus i variància de tipus]
 
 - .cyan[Clausures]
 
@@ -1895,7 +1895,7 @@ class: left, middle, inverse
 
 # Decoradors
 
-Són un métode per alterar quelcom invocable (*callable*).
+Són un mètode per alterar quelcom invocable (*callable*).
 
 Ho podem fer mitjançant les clausures.
 
@@ -2025,12 +2025,20 @@ class: left, middle, inverse
 
 - .brown[Orientació a Objectes]
 
-- .brown[Subtipus i variancia de tipus]
+- .brown[Subtipus i variància de tipus]
 
 - .brown[Clausures]
 
 - .cyan[Concurrència]
 
+---
 
+# Concurrència
+
+- teoria
+
+- [Async + CPS](https://expression.readthedocs.io/en/latest/tutorial/continuations.html)
+
+- async i telegram
 
 
