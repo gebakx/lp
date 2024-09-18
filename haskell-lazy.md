@@ -285,7 +285,7 @@ if (p != nullptr and p->elem == x) { ... }
 
 ---
 
-# *Thunks* 
+# Visualització dels *thunks* amb el *ghci* 
 
 .cols5050[
 .col1[
@@ -340,6 +340,43 @@ xs = [2,_,4,_,_,_,_,_,_,_]
 xs = [2,3,4,5,6,7,8,9,10,11]
 ```
 ]]
+
+---
+
+# Avaluació mandrosa pas a pas
+
+Donades les definicions (`nats` amb recursivitat infinita):
+
+.cols5050[
+.col1[
+```haskell
+nats = 0 : map (+1) nats           (N)
+
+map f (x:xs) = f x : map f xs      (M)
+```
+]
+.col2[
+```haskell
+take 0 _ = []                      (T1)
+take n (x:xs) = x : take (n−1) xs  (T2)
+```
+]]
+
+Avaluació pas a pas de `take 2 nats`:
+
+| expressió | regla |
+|:---|:---|
+| `take 2 nats` | |
+| `take 2 (0 : map (+1) nats)` | (N) |
+| `0 : take 1 (map (+1) nats)` | (T2) |
+| `0 : take 1 (map (+1) (0 : map (+1) nats))` | (N) |
+| `0 : take 1 ((+1) 0 : (map (+1) (map (+1) nats)))` | (M) |
+| `0 : take 1 (1 : (map (+1) (map (+1) nats)))` | (+1) |
+| `0 : 1 : take 0 (map (+1) (map (+1) nats))` | (M) |
+| `0 : 1 : []` | (T1) |
+
+
+
 
 ---
 class: left, middle, inverse
