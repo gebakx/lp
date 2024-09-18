@@ -21,7 +21,7 @@ class: center, middle
 .small[Funcions d'ordre superior. Funcions d'ordre superior habituals. Aplicacions. Exercicis.]
 
 - Interludi: [aplicació vs composició](haskell-interludi) <br>
-.small[Aplicació vs composició. Notació *point-free*. Exemples.]
+.small[Aplicació vs composició. Notació *point-free*. Exemple amb 2 paràmetres.]
 
 - Sessió 3: [llistes infinites](haskell-lazy.html) <br>
 .small[Llistes per comprensió. Avaluació mandrosa. Llistes infinites. Exercicis.]
