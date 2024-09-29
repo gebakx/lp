@@ -120,9 +120,9 @@ class: left, middle, inverse
 
 - .brown[Aplicació vs composició]
 
-- .cyan[Notació *point-free*]
+- .brown[Notació *point-free*]
 
-- Exemple amb 2 paràmetres
+- .cyan[Exemple amb 2 paràmetres]
 
 ---
 
