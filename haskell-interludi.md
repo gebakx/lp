@@ -196,6 +196,8 @@ f ??? length???
 ```haskell 
 f :: ([Int] -> [Int]) -> [Int] -> Int 
 f = (length .)
+
+f (map id) [2,4,1]  👉  3
 ```
 
 
