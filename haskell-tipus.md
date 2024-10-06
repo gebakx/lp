@@ -125,6 +125,22 @@ Els tipus sinònims aporten claredat (però no més seguretat).
 
 💡 Per a més seguretat, mireu `newtype` (no el considerem).
 
+
+---
+class: left, middle, inverse
+
+## Contingut
+
+- .brown[Tipus]
+
+- .cyan[Tipus algebraics]
+
+- Tipus genèrics predefinits
+
+- Classes
+
+- Exercicis
+
 ---
 
 # Tipus enumerats
@@ -163,8 +179,6 @@ guanya _ _ = False
 ---
 
 # Tipus algebraics
-
-
 
 Els **tipus algebraics** defineixen diversos constructors,
 cadascun amb zero o més dades associades.
@@ -252,21 +266,6 @@ data Rectangle = Rectangle Punt Punt
 λ> r
 👉 Rectangle (Punt 2 3) (Punt 4 6)
 ```
-
----
-class: left, middle, inverse
-
-## Contingut
-
-- .brown[Tipus]
-
-- .cyan[Tipus algebraics]
-
-- Tipus genèrics predefinits
-
-- Classes
-
-- Exercicis
 
 ---
 
