@@ -800,15 +800,10 @@ class: left, middle, inverse
 # Entrada/Sortida
 
 L'entrada/sortida en Haskell es basa en una mònada:
-
 - El programa principal és `main :: IO ()`
-
 - S'usa el constructor de tipus `IO` per gestionar l'entrada/sortida.
-
 - `IO` és instància de `Monad`.
-
 - Es sol usar amb notació `do`.
-
 
 Algunes operacions bàsiques:
 
@@ -821,6 +816,9 @@ putChar     :: Char -> IO ()        -- escriu un caràcter
 putStr      :: String -> IO ()      -- escriu un text
 putStrLn    :: String -> IO ()      -- escriu un text i un salt de línia
 print       :: Show a => a -> IO () -- escriu qualsevol showable
+
+readFile    :: FilePath -> IO String         -- getContents d'un arxiu
+writeFile   :: FilePath -> String -> IO ()   -- operació inversa
 ```
 
 `()` és una tupla de zero camps
