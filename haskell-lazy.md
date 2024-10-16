@@ -446,6 +446,14 @@ naturals = 0 : map (+1) naturals
 
 Generació de la llista infinita de factorials
 
+```haskell
+factorials :: [Integer]
+
+factorials = 1:zipWith (*) factorials [1..]
+
+λ> take 10 factorials
+👉 [1,1,2,6,24,120,720,5040,40320,362880]
+```
 
 ```haskell
 factorials :: [Integer]
@@ -455,7 +463,6 @@ factorials = scanl (*) 1 [1..]
 λ> take 6 $ scanl (*) 1 [1..]
 👉 [1, 1, 2, 6, 24, 120]
 ```
-
 
 ---
 
