@@ -233,7 +233,7 @@ Algunes funcions d'ordre superior predefined s'utilitzen molt habitualment:
 - `zipWith`
 - `all`, `any`
 - `dropWhile`, `takeWhile`
-- `iterate`,
+- `iterate`, `until`
 - `foldl`, `foldr`
 - `scanl`, `scanr`
 
@@ -538,8 +538,6 @@ Algunes funcions d'ordre superior predefined s'utilitzen molt habitualment:
 
     `iterate f x` retorna la llista infinita `[x, f x, f (f x), f (f (f x)), ...]`.
 
-    <div id='cy_iterate' style='width: 20em; height: 6em;'></div>
-
     `ys = iterate f x`
 
 
@@ -548,6 +546,26 @@ Algunes funcions d'ordre superior predefined s'utilitzen molt habitualment:
     ```Haskell
     λ> iterate (*2) 1
     👉 [1, 2, 4, 8, 16, ...]
+    ```
+
+---
+
+# until
+
+- Signatura:
+
+    ```Haskell
+    until :: (a -> Bool) -> (a -> a) -> a -> a
+    ```
+
+- Descripció:
+    `until p f x` retorna la llista `[x, f x, f (f x), f (f (f x)), ...]` fins que es satisfa el predicat `p`.
+
+- Exemples:
+
+    ```Haskell
+    λ> until (>100) (*3) 1
+    👉 243
     ```
 
 ---
@@ -637,6 +655,7 @@ Algunes funcions d'ordre superior predefined s'utilitzen molt habitualment:
     λ> scanr (+) 0 [3, 2, (-1)]
     👉 [4, 1, -1, 0]
     ```
+
 ---
 
 # Perspectiva
