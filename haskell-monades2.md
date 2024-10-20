@@ -656,7 +656,7 @@ eval (Sub x y) = evalf (-) x y
 eval (Mul x y) = evalf (*) x y 
 eval (Div x y) = do
     ts <- get                         -- recuperem la taula de símbols
-    let vlx = evalState (eval x) ts   -- nomÃ©s volem el valor, l'estat no canvia
+    let vlx = evalState (eval x) ts   -- només volem el valor, l'estat no canvia
     let vly = evalState (eval y) ts   -- idem
     return $ evalDiv vlx vly
 ```
@@ -671,7 +671,7 @@ eval (Div x y) = do
 evalf :: (Int -> Int -> Int) -> Expr -> Expr -> State TS (Maybe Int)
 evalf f x y = do
     ts <- get                          -- recuperem la taula de símbols
-    let vlx = evalState (eval x) ts    -- només volem el valor, l'estat no canvÃ¯a
+    let vlx = evalState (eval x) ts    -- només volem el valor, l'estat no canvia
     let vly = evalState (eval y) ts    -- idem
     return $ liftM2 f vlx vly          -- vlx i vly són Maybe Int
 
