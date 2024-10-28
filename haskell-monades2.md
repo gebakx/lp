@@ -529,13 +529,13 @@ runState pushTrigger Unlocked  👉  (Open,Locked)
 **Enllaç de _triggers_**
 
 ```haskell
-runState (coin >>= \x -> push >>= \y -> return [x,y]) Locked
+runState (coinTrigger >>= \x -> pushTrigger >>= \y -> return [x,y]) Locked
 
 👉  ([Thank,Open],Locked)
 ```
 
 ```haskell
-runState (sequence [coin, push]) Locked
+runState (sequence [coinTrigger, pushTrigger]) Locked
 
 👉  ([Thank,Open],Locked)
 ```
