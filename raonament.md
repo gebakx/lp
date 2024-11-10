@@ -609,6 +609,10 @@ Per fer-ho amb èxit sovint cal:
 - aprofitar les definicions recursives.
 - demostrar resultats auxiliars.
 
+Lectura recomanada:
+
+- Graham Hutton. [A tutorial on the universality and expressiveness of fold](https://people.cs.nott.ac.uk/pszgmh/fold.pdf). Journal on Functional Programming, 1999.
+
 ---
 class: left, middle, inverse
 
