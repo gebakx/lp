@@ -15,7 +15,7 @@ class: center, middle
 # Treball dirigit
 
 El treball dirigit consisteix en preparar un vídeo i un document escrit sobre
-les capacitats i límits de fer programació funcional en un llenguatge de programació imperatiu
+les propietat d'un llenguatge de programació.
 
 L'objectiu és satisfer les competències transversals de l'assignatura:
 <br>
@@ -48,20 +48,10 @@ llacunes.
 
 # Treball dirigit
 
-El treball dirigit consisteix en preparar un vídeo i un document escrit sobre els elements de programació funcional existents en un llenguatge de programació imperatiu. Heu de presentar, de forma informada, raonada i crítica, els elements de programació funcionals disponibles en el llenguatge, tot exposant les seves capacitats i límits.
+El treball dirigit consisteix en preparar un vídeo i un document escrit sobre les característiques d'un llenguatge de programació. Heu de presentar, de forma informada, raonada i crítica, les principals caracterísiques del llenguatge incloent, entre d'altres, la seva història, ús, paradgima/paradisgmes de programació, sistema d'execució, sistema de tipus, exemples de codi. 
 
 L'avaluació es farà per avaluació entre companys (co-avaluació) utilitzant <a href='https://mussol.jutge.org'>Mussol</a>.
 
-Per identificar l'LP imperatiu del vostre treball, calculeu el vostre DNI mòdul 8 per a obtenir un número entre 0 i 7. Aquest número us indicarà l'LP que us toca:
-
-- 0: Java
-- 1: C#
-- 2: Python
-- 3: JavaScript
-- 4: TypeScript
-- 5: Rust
-- 6: Julia
-- 7: Scala
 
 ---
 
@@ -71,9 +61,9 @@ Per identificar l'LP imperatiu del vostre treball, calculeu el vostre DNI mòdul
 
 2. Preparar el vídeo i el document.
 
-3. Lliurar el vídeo i el document PDF abans del 22 de maig a les 8:00 (matí).
+3. Lliurar el vídeo i el document PDF abans del 18 de desembre a les 8:00 (matí).
 
-4. Avaluar els vídeos i els documents de 3 altres companys usant una rúbrica preparada pels professors abans del 10 de juny a les 8:00 (matí).
+4. Avaluar els vídeos i els documents de 3 altres companys usant una rúbrica preparada pels professors abans del 8 de gener a les 8:00 (matí).
 
 
 <br>
@@ -106,7 +96,7 @@ Per identificar l'LP imperatiu del vostre treball, calculeu el vostre DNI mòdul
 
 #  Document
 
-- Lliurament d'un document curt en PDF (8 a 12 planes aproximadament).
+- Lliurament d'un document curt en PDF (8 a 12 planes en total aproximadament).
 
 - Primera part: acompanyament més detallat de la presentació.
 
