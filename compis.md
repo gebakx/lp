@@ -575,7 +575,7 @@ class: left, middle, inverse
     - analitzador sintàctic (parser)
     - analitzador semàntic
 - Middle end
-    - analitzador de codi intermedi
+    - generador de codi intermedi
     - optimitzador de codi intermedi
 - Back end
     - generador de codi específic
@@ -1063,13 +1063,12 @@ operacions sobre expressions regulars.
 >>> p.match("7654386732().")
 None
 >>> m = p.match('unicorn')
-<re.Match object; span=(0, 5), match='unicorn'>
 >>> m.group()
 'unicorn'
 >>> m.start(), m.end()
-(0, 5)
+(0, 7)
 >>> m.span()
-(0, 5)
+(0, 7)
 
 >>> re.search('casa', 'vaig a casa a dormir')
 <re.Match object; span=(7, 11), match='casa'>
