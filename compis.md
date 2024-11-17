@@ -6,7 +6,7 @@ class: center, middle
 
 ![:scale 65%](figures/compilation.png)<br><br>
 
-**Jordi Petit**
+**Jordi Petit i Gerard Escudero**
 
 ![:scale 75%](figures/fib.png)
 
@@ -977,16 +977,6 @@ Construcció:
 .cols5050[
 .col1[
 ```antlr
-RET     : 'return' ;
-
-LPAREN  : '(' ;
-RPAREN  : ')' ;
-
-ADD     : '+' ;
-SUB     : '-' ;
-MUL     : '*' ;
-DIV     : ';' ;
-
 DIGIT   : '0'..'9' ;
 LETTER  : [a-zA-Z] ;
 
@@ -1138,6 +1128,10 @@ class: left, middle, inverse
 - .brown[Anàlisi lèxica]
 
 - .cyan[Anàlisi sintàctica]
+
+  - Desambiguació de gramàtiques
+
+  - Generadors d'analitzadors
 
 - Arbres de sintaxi abstracta
 
@@ -1454,9 +1448,30 @@ jump-statement     : goto identifier ;
 
 - Associativitat dels operadors
 
-- Analitzadors top-down *vs.* bottom-up
-
 - Recursivitat per la dreta / per l'esquerra
+
+---
+class: left, middle, inverse
+
+## Contingut
+
+- .brown[Introducció]
+
+- .brown[Visió general]
+
+- .brown[Anàlisi lèxica]
+
+- .cyan[Anàlisi sintàctica]
+
+  - .cyan[Desambiguació de gramàtiques]
+
+  - Generadors d'analitzadors
+
+- Arbres de sintaxi abstracta
+
+- Anàlisi semàntica
+
+- Interpretació
 
 ---
 
@@ -1481,7 +1496,7 @@ el fragment `3 - 4 * 2 + 5` es pot derivar d'aquestes maneres:
 
 # Gramàtiques ambigües
 
-La prioritat i associativitat permet eliminar ambigüitats.
+La prioritat i associativitat permeten eliminar ambigüitats.
 
 - Prioritat: `1 * 2 + 3 * 4`
 
@@ -1515,7 +1530,7 @@ associativitat per la dreta
 
 ---
 
-# Desambiguació de gramàtiques
+# Desambiguació clàssica
 
 Comencem amb:
 
@@ -1533,7 +1548,7 @@ expr → expr + expr
 
 ---
 
-# Desambiguació de gramàtiques
+# Desambiguació clàssica
 
 Podem assignar prioritats trencant en vàries regles, una per nivell:
 
@@ -1563,7 +1578,7 @@ term → term * term
 
 ---
 
-# Desambiguació de gramàtiques
+# Desambiguació clàssica
 
 Podem fer que un costat o altre afecti el següent nivell de prioritat:
 
@@ -1593,6 +1608,51 @@ term → term * NUM
 > ✅ La gramàtica ja no és ambigua.
 
 > ❌ Però el `-` queda associat per la dreta...
+
+---
+
+# Desambiguació amb ANTLR
+
+- La prioritat de les regles ve donada per l'ordre d'escriptura
+
+- Podem combinar components en la mateixa regla
+
+- L'associaciativitat és per l'esquerra per defecte
+
+- Té una manera de definir l'associativitat per la dreta
+
+
+**Exemple**:
+
+```antlr4
+expr : <assoc=right> expr '^' expr
+     | expr ('*' | '/') expr
+     | expr ('+' | '-') expr
+     | NUM ;
+```
+
+---
+class: left, middle, inverse
+
+## Contingut
+
+- .brown[Introducció]
+
+- .brown[Visió general]
+
+- .brown[Anàlisi lèxica]
+
+- .cyan[Anàlisi sintàctica]
+
+  - .brown[Desambiguació de gramàtiques]
+
+  - .cyan[Generadors d'analitzadors]
+
+- Arbres de sintaxi abstracta
+
+- Anàlisi semàntica
+
+- Interpretació
 
 ---
 
@@ -1761,36 +1821,28 @@ expr2 → '+' term expr2
 
 # ANTLR
 
-ANTLR és un analitzador descendent LL(*k*).<br/>
-També permet usar `*` i `+` a les regles sintàctiques.
+- ANTLR és un analitzador descendent LL(*k*).
 
-```
-expr  → expr '+' term
-      | expr '-' term
-      | term
-```
+- Permet explicitar tokens a les regles sintàctiques:
 
-> ⬇ s'escriu senzillament
+    ```antlr4
+    expr : expr '+' expr ;
+    ```
 
-```antlr4
-expr : term ('+' term | '-' term) * ;
-```
+- Permet usar `*` i `+` a les regles sintàctiques:
 
-A més, la prioritat dels operadors ve donada per l'ordre d'escriptura:
+    ```antlr4
+    block : statement+ ;
+    ```
 
-```antlr4
-expr : expr '*' expr
-     | expr '+' expr
-     | NUM ;
-```
+- Permet definir fàcilment la prioritat d'operadors i associativitat:
 
-I es pot definir fàcilment l'associativitat:
-
-
-```antlr4
-expr : <assoc=right> expr '^' expr
-     | NUM ;
-```
+    ```antlr4
+    expr : <assoc=right> expr '^' expr
+         | expr ('*' | '/') expr
+         | expr ('+' | '-') expr
+         | NUM ;
+    ```
 
 ---
 
