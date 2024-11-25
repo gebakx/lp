@@ -29,7 +29,7 @@ class: left, middle, inverse
 
 - Clausures
 
-- Concurrència
+- Programació asíncrona
 
 ---
 
@@ -177,7 +177,7 @@ class: left, middle, inverse
 
 - Clausures
 
-- Concurrència
+- Programació asíncrona
 
 ---
 
@@ -289,7 +289,7 @@ class: left, middle, inverse
 
 - Clausures
 
-- Concurrència
+- Programació asíncrona
 
 ---
 
@@ -370,7 +370,7 @@ class: left, middle, inverse
 
 - Clausures
 
-- Concurrència
+- Programació asíncrona
 
 ---
 
@@ -582,7 +582,7 @@ class: left, middle, inverse
 
 - Clausures
 
-- Concurrència
+- Programació asíncrona
 
 ---
 
@@ -897,7 +897,7 @@ class: left, middle, inverse
 
 - Clausures
 
-- Concurrència
+- Programació asíncrona
 
 ---
 
@@ -1350,7 +1350,7 @@ class: left, middle, inverse
 
 - Clausures
 
-- Concurrència
+- Programació asíncrona
 
 
 ---
@@ -1622,7 +1622,7 @@ class: left, middle, inverse
 
   - Decoradors
 
-- Concurrència
+- Programació asíncrona
 
 ---
 
@@ -1672,7 +1672,7 @@ class: left, middle, inverse
 
   - Decoradors
 
-- Concurrència
+- Programació asíncrona
 
 ---
 
@@ -1753,7 +1753,7 @@ class: left, middle, inverse
 
   - Decoradors
 
-- Concurrència
+- Programació asíncrona
 
 ---
 
@@ -1805,7 +1805,7 @@ class: left, middle, inverse
 
   - Decoradors
 
-- Concurrència
+- Programació asíncrona
 
 ---
 
@@ -1889,7 +1889,7 @@ class: left, middle, inverse
 
   - .cyan[Decoradors]
 
-- Concurrència
+- Programació asíncrona
 
 ---
 
@@ -2029,11 +2029,11 @@ class: left, middle, inverse
 
 - .brown[Clausures]
 
-- .cyan[Concurrència]
+- .cyan[Programació asíncrona]
 
 ---
 
-# Concurrència
+# Programació asíncrona
 
 - teoria
 

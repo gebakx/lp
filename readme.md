@@ -45,6 +45,6 @@ class: center, middle
 .small[Introducció. Algorisme de Milner. Exercicis.]
 
 - [Conceptes avançats](avancats.html) <br>
-.small[Recursivitat. Orientació a objectes. Subtipus i variància de tipus. Clausures. Concurrència.]
+.small[Recursivitat. Orientació a objectes. Subtipus i variància de tipus. Clausures. Programació asíncrona.]
 
 - [Treball dirigit](treball.html)
