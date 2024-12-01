@@ -48,3 +48,5 @@ class: center, middle
 .small[Recursivitat. Orientació a objectes. Subtipus i variància de tipus. Clausures. Programació asíncrona.]
 
 - [Treball dirigit](treball.html)
+
+- [Tot en pdf](lp.pdf) (30/11/24)
