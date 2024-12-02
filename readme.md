@@ -31,6 +31,9 @@ class: center, middle
 - [Raonament equacional](raonament.html) <br>
 .small[Introducció. Base. Inducció. Inducció amb arbres. Millora eficiència. Sumari. Exercicis.]
 
+
+.footnote[.red[*] Podeu generar una versió en pdf fàcilment imprimint a fitxer.]
+
 ---
 
 ## Contingut (2/2)
@@ -49,4 +52,5 @@ class: center, middle
 
 - [Treball dirigit](treball.html)
 
-- [Tot en pdf](lp.pdf) (30/11/24)
+.footnote[.red[*] Podeu generar una versió en pdf fàcilment imprimint a fitxer.]
+
