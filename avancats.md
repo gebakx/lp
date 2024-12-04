@@ -2031,14 +2031,301 @@ class: left, middle, inverse
 
 - .cyan[Programació asíncrona]
 
+  - .cyan[Introducció]
+
+  - Exemples
+
+  - Aplicacions
+
 ---
 
-# Programació asíncrona
+# Introducció
 
-- teoria
+.cols5050[
+.col1[
+- .blue[Paral·lelisme] i .blue[multiprocés]: programes que involucren diversos processadors al mateix temps. No és possible en python.
 
-- [Async + CPS](https://expression.readthedocs.io/en/latest/tutorial/continuations.html)
+- .blue[Concurrència]: quan el sistema admet que hi hagi 2 o més tasques funcionant al mateix temps.
 
-- async i telegram
+- Programació .blue[asíncrona]: programació multitasca en front de la segqüencial (síncrona).
+]
+.col2[
+![:scale 100%](figures/avancat/entorn.png) <br>
+.center[.small[font: [Real Python: Async IO in Python](https://realpython.com/async-io-python/)]]
+]]
+
+- .blue[Threading]: model asíncron clàssic molt útil per programació multitasca amb memòria compartida.
+
+- .blue[Async IO]: nou model de programació asíncrona alternatiu als *threads*, però que no el substitueix. .red[No soluciona els problemes de les *race conditions*]
+
+---
+
+# Model AsyncIO
+
+.blue[Corutina]: funció asíncrona: podem aturar-la i fer-la continuar de nou.
+
+**Hello World!**
+
+```python3
+import asyncio
+
+async def say_hello_async():
+    await asyncio.sleep(3) 
+    print("Hola món!")
+
+asyncio.run(say_hello_async()) 
+```
+
+.cols5050[
+.col1[
+**Funcions de l'Async IO**:
+
+- .blue[async def]: defineix la corutina.
+
+- .blue[await]: torna el control fins que s'acompleix la tasca encomanada.
+
+- .blue[asyncio.run]: crida.
+]
+.col2[
+**Exemples d'ús**:
+
+- Mòbils: consulta d'urls.
+
+- Chatbots de telegram.
+
+- Motors de vídeojocs.
+]]
+
+---
+class: left, middle, inverse
+
+## Contingut
+
+- .brown[Recursivitat]
+
+- .brown[Orientació a Objectes]
+
+- .brown[Subtipus i variància de tipus]
+
+- .brown[Clausures]
+
+- .cyan[Programació asíncrona]
+
+  - .brown[Introducció]
+
+  - .cyan[Exemples]
+
+  - Aplicacions
+
+---
+
+# Gestió de diferents tasques
+
+.cols5050[
+.col1[
+**Codi**:
+
+```python3
+import asyncio
+
+async def task_one():
+    print("Starting task one")
+    await asyncio.sleep(1)
+    print("Finishing task one")
+    return 1
+
+async def task_two():
+    print("Starting task two")
+    await asyncio.sleep(2)
+    print("Finishing task two")
+    return 2
+
+async def main():
+    # Wait for all the coroutines
+    results = await 
+         asyncio.gather(task_one(), 
+                        task_two())
+    print(results)
+
+asyncio.run(main())
+```
+]
+.col2[
+**Sortida**:
+
+```
+Starting task one
+Starting task two
+Finishing task one
+Finishing task two
+[1, 2]
+```
+
+font: [Hascker Culture: Python asyncio](https://www.hackerculture.com/python-asyncio-guide-to-asynchronous-programming/)
+
+**Funcions**:
+
+.blue[asyncio.gather]: crida a diverses corutines.
+
+]]
+
+---
+
+# Espera i fallada
+
+.cols5050[
+.col1[
+**Codi**:
+
+```python3
+import asyncio
+
+async def might_fail():
+    try:
+        await asyncio.sleep(2)
+        print("Success!")
+    except asyncio.CancelledError:
+        print("Operation cancelled")
+
+async def main():
+    task = asyncio.create_task(
+            might_fail())
+
+    try:
+        await asyncio.wait_for(task, 
+            timeout=1)
+    except asyncio.TimeoutError:
+        print("Operation timed out")
+        task.cancel()
+        await task
+
+if __name__ == "__main__":
+    asyncio.run(main())
+```
+]
+.col2[
+**Sortida**:
+
+```
+Operation cancelled
+```
+
+font: [Medium: Master asyncio in Python](https://medium.com/pythoniq/master-asyncio-in-python-a-comprehensive-step-by-step-guide-4fc2cfa49925)
+
+**Funcions**:
+
+.blue[asyncio.wait_for]
+
+.blue[task.cancel]
+
+]]
+
+---
+
+# Obtenint URLs
+
+**Codi**:
+
+```python3
+import aiohttp
+import asyncio
+import time
+
+async def fetch_async(url, session):
+    async with session.get(url) as response:
+        return await response.text()
+
+async def main():
+    async with aiohttp.ClientSession() as session:
+        page1 = asyncio.create_task(fetch_async('http://example.com', session))
+        page2 = asyncio.create_task(fetch_async('http://example.org', session))
+        await asyncio.gather(page1, page2)
+
+start_time = time.time()
+asyncio.run(main())
+print(f"Done in {time.time() - start_time} seconds")
+```
+
+font: [Medium: Mastering Python’s Asyncio](https://medium.com/@moraneus/mastering-pythons-asyncio-a-practical-guide-0a673265cf04)
+
+---
+class: left, middle, inverse
+
+## Contingut
+
+- .brown[Recursivitat]
+
+- .brown[Orientació a Objectes]
+
+- .brown[Subtipus i variància de tipus]
+
+- .brown[Clausures]
+
+- .cyan[Programació asíncrona]
+
+  - .brown[Introducció]
+
+  - .brown[Exemples]
+
+  - .cyan[Aplicacions]
+
+---
+
+# Telegram
+
+[Pràctica d'LP (primavera del 23)](https://github.com/gebakx/lp-achurch-23): intèrpret de λ-càlcul.
+
+.cols5050[
+.col1[
+.small[
+```python3
+async def start(update: Update, 
+        context: ContextTypes
+            .DEFAULT_TYPE):
+    context.user_data['visitor'] = 
+        EvalVisitor()
+    user = update.effective_user
+    msg = '''
+AChurchBot!
+Benvingut %s !
+''' % user.first_name
+    await update.message.reply_text(msg)
+
+def main() -> None:
+    TOKEN = open('token.txt').read()
+        .strip()
+    application = Application.builder()
+        .token(TOKEN).build()
+    application.add_handler(
+        CommandHandler("start", start))
+    ...
+    application.run_polling()
+```
+]
+*python-telegram-bot* funciona sobre *asyncio*.
+]
+.col2[
+![:scale 95%](figures/avancat/telegram4.png)
+]]
+
+---
+
+# Algorisme de Flocking
+
+Algorisme asíncron per simular el moviment grupal d'animals com peixos, abelles, ocells... [(Reynolds, 1999)](http://www.red3d.com/cwr/papers/1999/gdc99steer.pdf)
+
+Ho veurem en C# i Unity (motor de vídeojocs) per apreciar millor l'efecte.
+
+**Algorisme bàsic**:
+
+- [Apunt de Flocking](https://gebakx.github.io/gameAIUnity/mv/flocking.html)
+
+- [Vídeo demostració](figures/avancat/flocking.mp4)
+
+**Implementació més complexa**:
+
+- Sebastian Lague. [Coding adventure: Boids](https://www.youtube.com/watch?v=bqtqltqcQhw), 2019.
+
+- [Repositori github](https://github.com/SebLague/Boids)
 
 
