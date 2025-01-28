@@ -62,3 +62,5 @@ class: center, middle
 
 - [Llenguatges de Scripting](scripting.html)
 
+
+.footnote[.red[*] Podeu generar una versió en pdf fàcilment imprimint a fitxer.]
