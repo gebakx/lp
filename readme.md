@@ -54,3 +54,11 @@ class: center, middle
 
 .footnote[.red[*] Podeu generar una versió en pdf fàcilment imprimint a fitxer.]
 
+---
+
+## Material adicional
+
+- [Elements de Programació Funcional en C++](fp-c++.html)
+
+- [Llenguatges de Scripting](scripting.html)
+
