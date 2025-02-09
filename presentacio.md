@@ -84,7 +84,7 @@ class: left, middle, inverse
 ## Mètode d'avaluació
 
 La [Guia docent](https://www.fib.upc.edu/ca/estudis/graus/grau-en-enginyeria-informatica/pla-destudis/assignatures/LP)
-estableix aquesta avaluació: N = 0.40·F + 0.25·P1 + 0.25·P2 + 0.10·D,
+estableix aquesta avaluació: N = 0.5·F + 0.2·P1 + 0.2·P2 + 0.1·D,
 on:
 
 - P1 = nota de l'examen parcial (mitjans de curs)
