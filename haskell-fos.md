@@ -559,7 +559,7 @@ Algunes funcions d'ordre superior predefined s'utilitzen molt habitualment:
     ```
 
 - Descripció:
-    `until p f x` retorna la llista `[x, f x, f (f x), f (f (f x)), ...]` fins que es satisfa el predicat `p`.
+    `until p f x` calcula la llista `[x, f x, f (f x), f (f (f x)), ...]` i retorna el primer element que satisfa el predicat `p`.
 
 - Exemples:
 
