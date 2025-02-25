@@ -565,9 +565,9 @@ class: left, middle, inverse
 
 # Funcions aritmètiques bàsiques
 
-- $0\equiv λf.λx.x\equiv F$
+- $0\equiv λs.λz.z\equiv F$
 
-- $n\equiv λf.λx.f^n x$
+- $n\equiv λs.λz.s^n z$
 
 
 .blue[Com fem el $succ$?]
@@ -628,7 +628,7 @@ class: left, middle, inverse
 
 - $leq\equiv λm.λn.IsZero\ (minus\ m\ n)$
 
-- $eq\equiv λm.λn.and\ (leq\ m\ n) (leq\ m\ n)$
+- $eq\equiv λm.λn.and\ (leq\ m\ n) (leq\ n\ m)$
 
 ---
 class: left, middle, inverse

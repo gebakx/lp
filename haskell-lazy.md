@@ -424,7 +424,7 @@ zeros = 0 : zeros
 Generació de la llista infinita de naturals
 
 ```haskell
-naturals :: [Int]
+naturals :: [Integer]
 
 -- amb rangs infinits
 naturals = [0..]
