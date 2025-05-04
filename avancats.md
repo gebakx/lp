@@ -297,55 +297,40 @@ class: left, middle, inverse
 
 És una tècnica que evita el creixement de la pila.
 
+.cols5050[
+.col1[
 **Funció trampolí**:
 
 ```python
 def trampoline(f, *args):
-    print('trampoline', len(traceback.extract_stack()) * '#')
     v = f(*args)
     while callable(v):
         v = v()
     return v
 ```
 
-**Factorial**:
-
-Afegim a la funció factorial un parell de *lambdes*:
-
+Crida a la funció mentre la continuació sigui de tipus funció (*callable*).
+]
+.col2[
 ```python
-def fact_cps2(n, cont):
-    if n == 0:
-        return cont(1)
-    else:
-        return lambda: fact_cps2(
-                         n - 1,
-                         lambda value: lambda: cont(n * value))
-```
-
----
-
-# Execució
-
-La pila no creix:
-
-```python
-trampoline(fact_cps2, 6, identitat)
+trampoline(fact_cps, 6, identitat)
 👉
 trampoline ##
-fact_cps2 ###
-fact_cps2 ####
-fact_cps2 ####
-fact_cps2 ####
-fact_cps2 ####
-fact_cps2 ####
-fact_cps2 ####
+fact_cps ###
+fact_cps ####
+fact_cps ####
+fact_cps ####
+fact_cps ####
+fact_cps ####
+fact_cps ####
 720
 ```
+]]
 
 **Funciona!**
 
 ```python
-trampoline(fact_cps2, 1000, identitat)
+trampoline(fact_cps, 1000, identitat)
 👉  4023872600770.....0000000000000000
 ```
 
