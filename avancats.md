@@ -309,9 +309,41 @@ def trampoline(f, *args):
     return v
 ```
 
+```python
+trampoline(fact_cps2, 6, identitat)
+👉  720
+```
+
 Crida a la funció mentre la continuació sigui de tipus funció (*callable*).
 ]
 .col2[
+**Adaptació per al trampolí**:
+
+```python
+def fact_cps1(n, cont):
+    if n == 0:
+        return cont(1)
+    else:
+        return fact_cps1(n - 1, 
+            lambda value: 
+                cont(n * value))
+
+def fact_cps2(n, cont):
+    if n == 0:
+        return cont(1)
+    else:
+        return lambda: fact_cps2(n - 1, 
+            lambda value: 
+                lambda: cont(n * value))
+```
+]]
+
+---
+
+# *Trampolining*
+
+**Funcionament de la pila**:
+
 ```python
 trampoline(fact_cps, 6, identitat)
 👉
@@ -325,7 +357,7 @@ fact_cps ####
 fact_cps ####
 720
 ```
-]]
+
 
 **Funciona!**
 
