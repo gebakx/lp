@@ -345,16 +345,16 @@ def fact_cps2(n, cont):
 **Funcionament de la pila**:
 
 ```python
-trampoline(fact_cps, 6, identitat)
+trampoline(fact_cps2, 6, identitat)
 👉
 trampoline ##
-fact_cps ###
-fact_cps ####
-fact_cps ####
-fact_cps ####
-fact_cps ####
-fact_cps ####
-fact_cps ####
+fact_cps2 ###
+fact_cps2 ####
+fact_cps2 ####
+fact_cps2 ####
+fact_cps2 ####
+fact_cps2 ####
+fact_cps2 ####
 720
 ```
 
@@ -362,11 +362,9 @@ fact_cps ####
 **Funciona!**
 
 ```python
-trampoline(fact_cps, 1000, identitat)
+trampoline(fact_cps2, 1000, identitat)
 👉  4023872600770.....0000000000000000
 ```
-
-
 
 ---
 class: left, middle, inverse
