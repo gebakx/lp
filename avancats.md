@@ -1105,7 +1105,8 @@ class Gat(Animal):
         print("rum-rum")
 
 def parlarN(animal, n):
-   n * [animal.parlar()]
+    for _ in range(n):
+        animal.parlar()
 ```
 ]
 .col2[
