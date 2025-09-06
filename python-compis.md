@@ -36,24 +36,56 @@ class: left, middle, inverse
 
 ## Instal·lació de l'ANTLR4 (per Python)
 
-
+.cols5050[
+.col1[
 #### Requeriments:
 
 - [Python 3](https://www.python.org)
 
-#### Instruccions:
-
+- python *pip*
+```bash
+sudo apt install python3-pip
 ```
-    pip install antlr4-tools
-    antlr4
 
-    pip install antlr4-python3-runtime
-
+- python *venv*
+```bash
+sudo apt install python3.12-venv
 ```
+
+.blue[Nota]: les versions d'`antlr4` i `antlr4-python3-runtime` han de coincidir.
 
 **Windows**: s'ha de fer alguna cosa més, seguiu la referència.
 
 - [antlr4-tools reference](https://github.com/antlr/antlr4-tools)
+]
+.col2[
+#### Instruccions:
+
+Instal·lació:
+
+```bash
+mkdir treball
+cd treball
+python3 -venv lp
+source lp/bin/activate
+pip install antlr4-tools
+antlr4
+pip install antlr4-python3-runtime==4.13.2
+deactivate
+```
+
+Ús:
+
+```bash
+mkdir treball
+cd treball
+source lp/bin/activate
+cd practica
+make
+deactivate
+```
+
+]]
 
 ---
 class: left, middle, inverse

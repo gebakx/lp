@@ -44,8 +44,8 @@ class: center, middle
 - [Programació en Python](python.html) <br>
 .small[Elements bàsics. Part funcional. Classes. Lazyness. Tipus algebraics. Compiladors.]
 
-- [Inferència de tipus](inferencia-tipus.html) <br>
-.small[Introducció. Algorisme de Milner. Exercicis.]
+- [Inferència de tipus](inferencia.html) <br>
+.small[Introducció. Tipus i funcions predefinides. Funcions i condicionals. Funcions d'ordre superior. Patrons. Classes. Errors de tipus. Exercicis.]
 
 - [Conceptes avançats](avancats.html) <br>
 .small[Recursivitat. Orientació a objectes. Subtipus i variància de tipus. Clausures. Programació asíncrona.]
@@ -62,6 +62,6 @@ class: center, middle
 
 - [Llenguatges de Scripting](scripting.html)
 
-- [Inferència de tipus](inferencia.html) .red[(nou)]
+- [Inferència de tipus](inferencia-tipus.html) .red[(antic)]
 
 .footnote[.red[*] Podeu generar una versió en pdf fàcilment imprimint a fitxer.]
