@@ -261,7 +261,7 @@ Font: [GHCup: How to install](https://www.haskell.org/ghcup/install/#how-to-inst
 
 ]]
 
-Apunteu-vos al curs "Problems in Haskell" de [Jutge.org](https://jutge.org). 
+Apunteu-vos al curs "Llenguatges de programació" de [Jutge.org](https://jutge.org). 
 
 ![:scale 55%](figures/haskell/jutge-haskell.png)
 ![:scale 15%](figures/haskell/jutge.png)
