@@ -49,7 +49,7 @@ sudo apt install python3-pip
 
 - python *venv*
 ```bash
-sudo apt install python3.12-venv
+sudo apt install python3-venv
 ```
 
 .blue[Nota]: les versions d'`antlr4` i `antlr4-python3-runtime` han de coincidir.
@@ -66,7 +66,7 @@ Instal·lació:
 ```bash
 mkdir treball
 cd treball
-python3 -venv lp
+python3 -m venv lp
 source lp/bin/activate
 pip install antlr4-tools
 antlr4
