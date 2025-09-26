@@ -65,7 +65,7 @@ class: left, middle, inverse
 
 
 ![:scale 20%](figures/profes/jpetit.png) &nbsp;
-![:scale 20%](figures/profes/gescudero.png) &nbsp;
+![:scale 20%](figures/profes/gerard.png) &nbsp;
 ![:scale 18%](figures/profes/edelmira.png) &nbsp;
 ![:scale 20%](figures/profes/jdelgado.png) &nbsp;
 
