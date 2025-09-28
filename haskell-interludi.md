@@ -200,6 +200,9 @@ f = (length .)
 f (map id) [2,4,1]  👉  3
 ```
 
+```haskell 
+numVegades x =  length . (filter . (==)) x
+```
 
 ```haskell 
 numVegades x = ((length .) . (filter . (==))) x       -- apliquem f . g
