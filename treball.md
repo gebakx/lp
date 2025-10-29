@@ -61,9 +61,9 @@ L'avaluació es farà per avaluació entre companys (co-avaluació) utilitzant <
 
 2. Preparar el vídeo i el document.
 
-3. Lliurar el vídeo i el document PDF abans del 19 de maig a les 8:00 (matí).
+3. Lliurar el vídeo i el document PDF abans del 19 de desembre a les 8:00 (matí).
 
-4. Avaluar els vídeos i els documents de 3 altres companys usant una rúbrica preparada pels professors abans del 2 de juny a les 8:00 (matí).
+4. Avaluar els vídeos i els documents de 3 altres companys usant una rúbrica preparada pels professors abans del 7 de gener a les 8:00 (matí).
 
 
 <br>
