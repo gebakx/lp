@@ -23,6 +23,8 @@ class: left, middle, inverse
 
   - *Trampolining*
 
+  - Continuacions en Haskell
+
 - Orientació a Objectes
 
 - Subtipus i variància de tipus
@@ -171,6 +173,8 @@ class: left, middle, inverse
 
   - *Trampolining*
 
+  - Continuacions en Haskell
+
 - Orientació a Objectes
 
 - Subtipus i variància de tipus
@@ -283,6 +287,8 @@ class: left, middle, inverse
 
   - .cyan[*Trampolining*]
 
+  - Continuacions en Haskell
+
 - Orientació a Objectes
 
 - Subtipus i variància de tipus
@@ -365,6 +371,81 @@ fact_cps2 ####
 trampoline(fact_cps2, 1000, identitat)
 👉  4023872600770.....0000000000000000
 ```
+
+---
+class: left, middle, inverse
+
+## Contingut
+
+- .cyan[Recursivitat]
+
+  - .brown[*Tail Call*]
+
+  - .brown[*Continuation-Passing Style*]
+
+  - .brown[*Trampolining*]
+
+  - .cyan[Continuacions en Haskell]
+
+- Orientació a Objectes
+
+- Subtipus i variància de tipus
+
+- Clausures
+
+- Programació asíncrona
+
+---
+
+# Continuacions en Haskell
+
+```haskell
+{-# LANGUAGE RankNTypes #-}
+
+facCPS :: Integer -> (forall r. (Integer -> r) -> r)
+facCPS 0 cont = cont 1
+facCPS n cont = facCPS (n - 1) $ \f -> cont (n * f)
+```
+
+```haskell
+facCPS 10 id
+👉  3628800
+```
+
+Hem d'afegir el quantificador universal per tipus (`forall`) amb una directiva.
+
+.footnote[[font](https://web.cs.dal.ca/~nzeh/Teaching/3137/haskell/monads/continuations/haskell/cps/)]
+
+---
+
+# Mònade Cont
+
+```haskell
+import Control.Monad.Cont
+
+facCPS :: Integer -> Cont r Integer
+facCPS 0 = return 1
+facCPS n = do
+    f <- facCPS (n - 1)
+    return (n * f)
+```
+
+```haskell
+runCont (facCPS 10) id
+👉  3628800
+```
+
+```haskell
+runCont (facCPS 4 >>= facCPS) id
+👉  620448401733239439360000
+```
+
+En el ghci, per executar el codi anterior, heu de fer:
+```
+:set -package mtl
+```
+
+.footnote[[font](https://web.cs.dal.ca/~nzeh/Teaching/3137/haskell/monads/continuations/cont/)]
 
 ---
 class: left, middle, inverse
