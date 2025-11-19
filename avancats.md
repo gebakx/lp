@@ -414,6 +414,12 @@ facCPS 10 id
 
 Hem d'afegir el quantificador universal per tipus (`forall`) amb una directiva.
 
+Dues de les funcions del quantificador són:
+
+- obliga a que les implementacions amb tipus polimòrfics siguin independents dels tipus
+
+- permet declarar el tipus de funcions locals que contenen tipus polimòrfics
+
 .footnote[[font](https://web.cs.dal.ca/~nzeh/Teaching/3137/haskell/monads/continuations/haskell/cps/)]
 
 ---
