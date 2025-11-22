@@ -400,9 +400,7 @@ class: left, middle, inverse
 # Continuacions en Haskell
 
 ```haskell
-{-# LANGUAGE RankNTypes #-}
-
-facCPS :: Integer -> (forall r. (Integer -> r) -> r)
+facCPS :: Integer -> (Integer -> Integer) -> Integer
 facCPS 0 cont = cont 1
 facCPS n cont = facCPS (n - 1) $ \f -> cont (n * f)
 ```
@@ -412,23 +410,10 @@ facCPS 10 id
 👉  3628800
 ```
 
-Hem d'afegir el quantificador universal per tipus (`forall`) amb una directiva.
-
-Dues de les funcions del quantificador són:
-
-- obliga a que les implementacions amb tipus polimòrfics siguin independents dels tipus
-
-- permet declarar el tipus de funcions locals que contenen tipus polimòrfics
-
-.footnote[[font](https://web.cs.dal.ca/~nzeh/Teaching/3137/haskell/monads/continuations/haskell/cps/)]
-
----
-
-# Mònade Cont
+### Mònade Cont
 
 ```haskell
-import Control.Monad.Cont
-
+import Control.Monad.Cont    -- en ghci: :set -package mtl
 facCPS :: Integer -> Cont r Integer
 facCPS 0 = return 1
 facCPS n = do
@@ -436,20 +421,19 @@ facCPS n = do
     return (n * f)
 ```
 
+.cols5050[
+.col1[
 ```haskell
 runCont (facCPS 10) id
 👉  3628800
 ```
-
+]
+.col2[
 ```haskell
 runCont (facCPS 4 >>= facCPS) id
 👉  620448401733239439360000
 ```
-
-En el ghci, per executar el codi anterior, heu de fer:
-```
-:set -package mtl
-```
+]]
 
 .footnote[[font](https://web.cs.dal.ca/~nzeh/Teaching/3137/haskell/monads/continuations/cont/)]
 
