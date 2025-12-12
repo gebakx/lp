@@ -187,7 +187,7 @@ class: left, middle, inverse
 
 # *Continuation-Passing Style*
 
-És una tècnica de la programació funcional en la que es retornen les funcions a aplicar al resultat, en lloc dels valors.
+Les funcions no retornen resultats directament, sinó que passen els seus resultats a una altra funció (la continuació), que s'encarrega de processar-los.
 
 **Exemple**:
 
@@ -301,7 +301,7 @@ class: left, middle, inverse
 
 # *Trampolining*
 
-És una tècnica que evita el creixement de la pila.
+La tècnica del trampolí converteix la recursió en iteració retornant crides de funcions ajornades en lloc d'executar-les directament; així s'evita el creixement de la pila.
 
 .cols5050[
 .col1[
@@ -2134,7 +2134,7 @@ class: left, middle, inverse
 
 - .blue[Concurrència]: quan el sistema admet que hi hagi 2 o més tasques funcionant al mateix temps.
 
-- Programació .blue[asíncrona]: programació multitasca en front de la segqüencial (síncrona).
+- Programació .blue[asíncrona]: programació multitasca en front de la seqüencial (síncrona).
 ]
 .col2[
 ![:scale 100%](figures/avancat/entorn.png) <br>
