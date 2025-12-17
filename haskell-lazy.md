@@ -412,6 +412,9 @@ zeros = iterate id 0
 -- amb recursivitat infinita
 zeros = 0 : zeros
 
+-- amb unfoldr         -- import Data.List (unfoldr)
+zeros = unfoldr (\x -> Just (x, x)) 0
+
 -- prova
 λ> take 6 zeros
 👉 [0, 0, 0, 0, 0, 0]
@@ -435,6 +438,9 @@ naturals = iterate (+1) 0
 -- amb recursivitat infinita
 naturals = 0 : map (+1) naturals
 
+-- amb unfoldr         -- import Data.List (unfoldr)
+naturals = unfoldr (\x -> Just (x, (+1) x)) 0
+
 -- prova
 λ> take 6 naturals
 👉 [0, 1, 2, 3, 4, 5]
@@ -449,19 +455,17 @@ Generació de la llista infinita de factorials
 ```haskell
 factorials :: [Integer]
 
+-- amb recursivitat infinita
 factorials = 1:zipWith (*) factorials [1..]
+
+-- amb unfoldr         -- import Data.List (unfoldr)
+factorials = unfoldr (\(f, n)-> Just (f, (f * n, n + 1))) (1, 1)
+
+-- amb scanl
+factorials = scanl (*) 1 [1..]
 
 λ> take 10 factorials
 👉 [1,1,2,6,24,120,720,5040,40320,362880]
-```
-
-```haskell
-factorials :: [Integer]
-
-factorials = scanl (*) 1 [1..]
-
-λ> take 6 $ scanl (*) 1 [1..]
-👉 [1, 1, 2, 6, 24, 120]
 ```
 
 ---
@@ -472,21 +476,23 @@ Generació de la llista infinita de nombres de Fibonacci
 
 ```haskell
 fibs :: [Integer]
+
+-- amb recursivitat infinita
 fibs = 0 : 1 : zipWith (+) fibs (tail fibs)
-```
 
-
-```haskell
-fibs :: [Integer]
+-- amb generació infinita
 fibs = fibs' 0 1
     where
         fibs' m n = m : fibs' n (m+n)
-```
 
+-- amb llistes per comprensió
+fibs = fibs = 0:1:[a+b | (a,b) <- zip (fibs) (tail fibs)]
 
-```haskell
-fibs :: [Integer]
-fibs = [a+b | (a,b) <- zip (1:fibs) (0:1:fibs)]
+-- amb unfoldr         -- import Data.List (unfoldr)
+fibs = unfoldr (\(x, y) -> Just (x, (y, x + y))) (0, 1)
+
+λ> take 10 fibs
+👉  [0,1,1,2,3,5,8,13,21,34]
 ```
 
 ---
