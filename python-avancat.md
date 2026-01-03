@@ -399,7 +399,7 @@ class fib:
 
 ```python3
 for (i, x) in enumerate(fib(), 1):
-    if i > 10:
+    if i > 6:
         break
     print(i, x)
 👉
