@@ -710,7 +710,7 @@ més gran que la suma dels seus anteriors:
 superCreixent :: Num a, Ord a => [a] -> Bool
 
 superCreixent [] = True
-superCreixent (x:xs) = superCreixent && x > sum xs
+superCreixent (x:xs) = superCreixent xs && x > sum xs
 ```
 
 1. Mostreu que `superCreixent` funciona en temps quadràtic.
