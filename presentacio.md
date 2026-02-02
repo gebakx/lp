@@ -116,25 +116,25 @@ del curs.
 
 - Classes:
 
-    - Inici: dl 8 de setembre
+    - Inici: dl 9 de febrer
 
-    - Final: dv 19 de desembre
+    - Final: dv 29 de maig
 
 - Exàmens:
 
-    - Examen parcial: dv 31 d'octubre
+    - Examen parcial: dv 10 d'abril
         (10:30 - 12:30)
 
-    - Examen final: dc 7 de gener
-        (8:00 - 11:00)
+    - Examen final: dl 8 de juny
+        (15:00 - 17:00)
 
 - Treballs:
 
-    - Lliurament pràctica: dc 7 de gener (08:00)
+    - Lliurament pràctica: dl 1 de juny (08:00)
 
-    - Lliurament treball dirigit: dv 19 de desembre (08:00)
+    - Lliurament treball dirigit: dl 11 de maig (08:00)
 
-    - Correcció treball dirigit: dc 7 de gener (08:00)
+    - Correcció treball dirigit: dl 1 de juny (08:00)
 
 ---
 
