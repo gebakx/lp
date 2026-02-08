@@ -216,7 +216,7 @@ class: left, middle, inverse
 
 # Característiques bàsiques d'un LP
 
-- Tipus de dades: amb quins dades i objectes treballem.
+- Tipus de dades: amb quines dades i objectes treballem.
 
 - Sistema de tipus.
 
