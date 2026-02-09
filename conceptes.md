@@ -685,7 +685,7 @@ Com mesurar la popularitat dels LPs?
 
   ![:scale 90%](figures/conceptes/tiobe.png)
 
-  .small[Font: https://www.tiobe.com/tiobe-index/ (2021)]
+  .small[Font: https://www.tiobe.com/tiobe-index/ (2026)]
 
 ---
 
