@@ -736,12 +736,12 @@ Quins LPs estudiar/evitar?
 
 ---
 
-# Ús dels LPs (1965 - 2019)
+# Ús dels LPs (1965 - 2025)
 
 <br>
 
 .center[
-<iframe width="640" height="360" src="https://www.youtube.com/embed/Og847HVwRSI" frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<iframe width="640" height="360" src="https://www.youtube.com/watch?v=2psLa3OKP4A" frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 ]
 
 ---
