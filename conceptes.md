@@ -693,11 +693,11 @@ Com mesurar la popularitat dels LPs?
 
 Com mesurar la popularitat dels LPs?
 
-- IEEE Spectrum ranking: The Top Programming Languages 2018
+- IEEE Spectrum ranking: The Top Programming Languages 2025
 
   .center[![:scale 80%](figures/conceptes/ieee-ranking.png)]
 
-  .small[Font: https://spectrum.ieee.org/static/interactive-the-top-programming-languages-2018 (2018)]
+  .small[Font: https://spectrum.ieee.org/top-programming-languages-2025]
 
 ---
 
