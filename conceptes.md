@@ -685,7 +685,7 @@ Com mesurar la popularitat dels LPs?
 
   ![:scale 90%](figures/conceptes/tiobe.png)
 
-  .small[Font: https://www.tiobe.com/tiobe-index/ (2021)]
+  .small[Font: https://www.tiobe.com/tiobe-index/ (2026)]
 
 ---
 
@@ -693,11 +693,11 @@ Com mesurar la popularitat dels LPs?
 
 Com mesurar la popularitat dels LPs?
 
-- IEEE Spectrum ranking: The Top Programming Languages 2018
+- IEEE Spectrum ranking: The Top Programming Languages 2025
 
   .center[![:scale 80%](figures/conceptes/ieee-ranking.png)]
 
-  .small[Font: https://spectrum.ieee.org/static/interactive-the-top-programming-languages-2018 (2018)]
+  .small[Font: https://spectrum.ieee.org/top-programming-languages-2025]
 
 ---
 
@@ -736,12 +736,12 @@ Quins LPs estudiar/evitar?
 
 ---
 
-# Ús dels LPs (1965 - 2019)
+# Ús dels LPs (1965 - 2025)
 
 <br>
 
 .center[
-<iframe width="640" height="360" src="https://www.youtube.com/embed/Og847HVwRSI" frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<iframe width="640" height="360" src="https://www.youtube.com/watch?v=2psLa3OKP4A" frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 ]
 
 ---
