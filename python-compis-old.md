@@ -26,7 +26,7 @@ class: left, middle, inverse
 
 - Exercicis
 
-- Funcions
+- Taules de símbols
 
 - Tractament d'errors
 
@@ -100,7 +100,7 @@ class: left, middle, inverse
 
 - Exercicis
 
-- Funcions
+- Taules de símbols
 
 - Tractament d'errors
 
@@ -117,12 +117,11 @@ Arxiu de gramàtica `exprs.g4`:
 
 grammar exprs;
 
-root : expr EOF   
+root : expr             // l'etiqueta ja és root
      ;
 
-expr : expr ('*' | '/') expr
-     | expr ('+' | '-') expr
-     | NUM 
+expr : expr '+' expr    # suma
+     | NUM              # numero
      ;
 
 NUM : [0-9]+ ;
@@ -131,9 +130,11 @@ WS  : [ \t\n\r]+ -> skip ;
 
 ⚠️ Noteu que el nom de l'arxiu ha de concordar amb el de la gramàtica.
 
-* `expr`: definició de la gramàtica per l'aritmètica de nombres naturals. 
+* `expr`: definició de la gramàtica per la suma de nombres naturals. 
 
 * `skip`: indica a l'escàner que el token WS no ha d'arribar al parser.
+
+* `#`: etiqueta per diferenciar branques de les regles (no és un comentari!)
 
 ---
 
@@ -150,8 +151,6 @@ genera els arxius:
 * `exprsLexer.py` i `exprsLexer.tokens`
 
 * `exprsParser.py` i `exprs.tokens`
-
-* `exprsLexer.interp` i `exprsParser.interp`
 
 ⚠️ Noteu que els arxius anteriors comencen pel nom de la gramàtica.
 
@@ -179,12 +178,9 @@ Noteu que aquest script processa una única línia d'entrada per consola.
 .col1[
 En funcionament: 
 ```python3
-2 + 3 * 4
+3 + 4
 👉
-(root (expr (expr 2) + 
-            (expr (expr 3) * (expr 4))) 
-      <EOF>)
-
+(root (expr (expr 3) + (expr 4)))
 ```
 ]
 .col2[
@@ -192,9 +188,9 @@ En funcionament:
 ```python3
 3 +
 👉
-line 1:2 missing NUM at '<EOF>'
+line 1:3 missing NUM at '<EOF>'
 (root (expr (expr 3) + 
-            (expr <missing NUM>)) <EOF>)
+      (expr <missing NUM>)))
 ```
 ]]
 
@@ -231,43 +227,52 @@ WORD : [a-zA-Z\u0080-\u00FF]+ ;
 
 ## Notes sobre gramàtiques
 
-**Precedència d'operadors**:
+#### Recursivitat per l'esquerra:
+
+Amb les versions anteriors no es podia afegir una regla de l'estil: <br>
+`expr : expr '*' expr`
+
+Per solucionar això s'afegien regles tipus 
+`expr : NUM '*' expr`
+
+.col5050[
+.col1[
+#### Precedència d'operadors:
 
 Amb l'ordre d'escriptura:
-
 ```
-expr : expr ('*' | '/') expr
-     | expr ('+' | '-') expr
-     | NUM
+expr : expr '*' expr
+     | expr '+' expr
+     | INT
      ;
 ```
+]
+.col2[
+#### Associativitat:
 
-<br>
-
-**Associativitat**:
-
-L'associativitat com la potència queda com:
-
+L'associativitat com la potència <br> queda com:
 ```
 expr : <assoc=right> expr '^' expr
      | INT
      ;
 ```
+]
+]
 
 ---
 
 ## Exercici 1
 
 Afegiu a la gramàtica els operadors de:
+* resta
 
-* residu de la divisió
+* multiplicació
+
+* divisió 
 
 * potència
 
-* parèntesis
-
 Tingueu en compte:
-
 * la precedència d'operadors 
 
 * l'associativitat a la dreta de la potència
@@ -285,7 +290,7 @@ class: left, middle, inverse
 
 - Exercicis
 
-- Funcions
+- Taules de símbols
 
 - Tractament d'errors
 
@@ -332,63 +337,36 @@ La crida a `self.visit(node)` visita el visitador associat al tipus de `node`.
 
 ---
 
-## Gramàtica amb etiquetes
+## Visitor per recórrer l'arbre
 
-```
-grammar exprs;
-root : expr EOF 
-     ;
-expr : esq=expr op=('*'|'/') dre=expr    # binari
-     | esq=expr op=('+'|'-') dre=expr    # binari
-     | NUM                               # numero
-     ;
-NUM : [0-9]+ ;
-WS  : [ \t\n\r]+ -> skip ;
-```
-
-Amb aquesta gramàtica tindrem els mètodes:
-
-- `visitRoot`, `visitBinari` i `visitNumero`
-
----
-
-## Visitor per avaluar expressions
-
-Classe *visitor* `EvalVisitor` per mostrar l'arbre heretant de la classe base:
+Classe *visitor* `TreeVisitor.py` per mostrar l'arbre heretant de la classe base:
 
 .small[
 ```python3
-class EvalVisitor(exprsVisitor):
+class TreeVisitor(exprsVisitor):
+
     def __init__(self):
-        self.functions = {'+': lambda x, y: x + y,
-                          '-': lambda x, y: x - y,
-                          '*': lambda x, y: x * y,
-                          '/': lambda x, y: x // y}
+        self.nivell = 0
 
-    def visitRoot(self, ctx):
-        print(self.visit(ctx.expr()))
-
-    def visitBinari(self, ctx):
-        expressio1 = ctx.esq
-        expressio2 = ctx.dre
-        op = ctx.op.text
-        return self.functions[op](self.visit(expressio1), self.visit(expressio2))
+    def visitSuma(self, ctx):
+        [expressio1, operador, expressio2] = list(ctx.getChildren())
+        print('  ' *  self.nivell + '+')
+        self.nivell += 1
+        self.visit(expressio1)
+        self.visit(expressio2)
+        self.nivell -= 1
 
     def visitNumero(self, ctx):
-        return int(ctx.NUM().getText())```
+        [numero] = list(ctx.getChildren())
+        print("  " * self.nivell + numero.getText())
+```
 ]
 
-.cols5050[
-.col1[
-- `self.visit`: visita un node
+- Cada funció de visita obté els fills del node `ctx` amb `getChildren()`, i:
 
-- `ctx.expr()`: obté el fill `expr`
-]
-.col2[
-- `ctx.esq`: obté l'etiqueta `esq`
+  - visita els fills sintàctics amb `self.visit(ctx_i)`, o 
 
-- `getText()`: obté el text del node
-]]
+  - obté algun atribut dels fills lèxics, com ara el seu text amb `ctx_i.getText()`.
 
 ---
 
@@ -402,7 +380,7 @@ from exprsLexer import exprsLexer
 from exprsParser import exprsParser
 from exprsVisitor import exprsVisitor
 
-class EvalVisitor(exprsVisitor):
+class TreeVisitor(exprsVisitor):
   ...
 
 input_stream = InputStream(input('? '))
@@ -411,16 +389,55 @@ token_stream = CommonTokenStream(lexer)
 parser = exprsParser(token_stream)
 tree = parser.root()
 
-visitor = EvalVisitor()
+visitor = TreeVisitor()
 visitor.visit(tree)
 ```
 
-**Exemple**:
+---
+
+## Execució
+
+Un exemple de resultat de l'script anterior:
 
 ```
-2 + 3 * 5
-👉  17
+2 + 3 + 4
+👉
++
+  +
+    2
+    3
+  4
 ```
+
+## Exercici 2
+
+Afegiu el mecanisme per mostrar l'arbre generat a la gramàtica <br> de l'exercici 1.
+
+---
+
+## Avaluació i interpretació d'ASTs
+
+*Visitor* per avaluar les expressions:
+
+```python3
+class EvalVisitor(exprsVisitor):
+
+    def visitRoot(self, ctx):
+        [expressio] = list(ctx.getChildren())
+        print(self.visit(expressio))
+
+    def visitSuma(self, ctx):
+        [expressio1, operador, expressio2] = list(ctx.getChildren())
+        return self.visit(expressio1) + self.visit(expressio2)
+
+    def visitNumero(self, ctx):
+        [numero] = list(ctx.getChildren())
+        return int(numero.getText())
+```
+
+Exemple:
+
+`3 + 4 + 5  👉  12`
 
 **Nota**: podeu utilitzar més d'un visitor en un script.
 
@@ -437,7 +454,7 @@ class: left, middle, inverse
 
 - .cyan[Exercicis]
 
-- Funcions
+- Taules de símbols
 
 - Tractament d'errors
 
@@ -445,11 +462,11 @@ class: left, middle, inverse
 
 ---
 
-## Exercici 2
-
-Afegiu el tractament d'avaluació per la resta d'operadors de l'exercici 1.
-
 ## Exercici 3
+
+Afegiu el tractament d'avaluació per la resta d'operadors de l'exercici 3.
+
+## Exercici 4
 
 Definiu una gramàtica i el seu mecanisme d'avaluació/execució per a quelcom tipus:
 ```
@@ -463,7 +480,7 @@ Nota: es pot utilitzar un diccionari com a taula de símbols.
 
 ---
 
-## Exercici 4
+## Exercici 5
 
 Amplieu l'exercici anterior per a que tracti quelcom com el següent:
 ```
@@ -474,11 +491,11 @@ if c = 0 then
 end
 ```
 
-## Exercici 5
+## Exercici 6
 
 Exploreu que passa si realitzem l'exercici anterior sense el token `end`.
 
-## Exercici 6
+## Exercici 7
 
 Amplieu l'exercici anterior per a que tracti l'estructura `while`:
 ```
@@ -502,7 +519,7 @@ class: left, middle, inverse
 
 - .brown[Exercicis]
 
-- .cyan[Funcions]
+- .cyan[Taules de símbols]
 
 - Tractament d'errors
 
@@ -549,13 +566,13 @@ Qüestions a tenir en compte:
 ]
 ]]
 
-## Exercici 7
+## Exercici 8
 
 Amplieu l'exercici anterior per a incloure funcions d'aquest tipus.
 
 ---
 
-## Exercici 8
+## Exercici 9
 
 Comproveu que el vostre programa funciona amb recursivitat:
 
@@ -592,7 +609,7 @@ class: left, middle, inverse
 
 - .brown[Exercicis]
 
-- .brown[Funcions]
+- .brown[Taules de símbols]
 
 - .cyan[Tractament d'errors]
 
@@ -662,7 +679,7 @@ class: left, middle, inverse
 
 - .brown[Exercicis]
 
-- .brown[Funcions]
+- .brown[Taules de símbols]
 
 - .brown[Tractament d'errors]
 

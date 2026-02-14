@@ -64,4 +64,6 @@ class: center, middle
 
 - [Inferència de tipus](inferencia-tipus.html) .red[(antic)]
 
+- [Antlr i Python](python-compis-old.html) .red[(antic)]
+
 .footnote[.red[*] Podeu generar una versió en pdf fàcilment imprimint a fitxer.]
