@@ -355,6 +355,8 @@ xs = [2,3,4,5,6,7,8,9,10,11]
 
   - les expressions no tenen perquè ser avaluades i, en alguns casos, mai seran avaluades
 
+  - s'atura quan troba una abstracció o un constructor (de dades)
+
   - *nonstrict*, *outside-in*, ordre normal del λ-càlcul
 
 - .blue[*Call by need*] 
