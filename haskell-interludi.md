@@ -21,6 +21,8 @@ class: left, middle, inverse
 
 - Exemple amb 2 paràmetres
 
+- Lambdabot
+
 ---
 
 # Aplicació vs composició
@@ -86,6 +88,8 @@ class: left, middle, inverse
 
 - Exemple amb 2 paràmetres
 
+- Lambdabot
+
 ---
 
 # Notació *Point-free*
@@ -123,6 +127,8 @@ class: left, middle, inverse
 - .brown[Notació *point-free*]
 
 - .cyan[Exemple amb 2 paràmetres]
+
+- Lambdabot
 
 ---
 
@@ -231,3 +237,42 @@ g = filter . (==)
 (f . g) 3 [3,2,3]  👉  2
 ```
 ]]
+
+---
+class: left, middle, inverse
+
+## Contingut
+
+- .brown[Aplicació vs composició]
+
+- .brown[Notació *point-free*]
+
+- .brown[Exemple amb 2 paràmetres]
+
+- .cyan[Lambdabot]
+
+---
+
+# Lambdabot
+
+Eina de conversió pointfree a/de pointfull.
+
+Instal·lació: `sudo apt install lambdabot`
+
+.blue[Ús]:
+
+```bash
+$ lambdabot -e "@pl \x l -> length $ filter (== x) l"
+(length .) . filter . (==)
+```
+
+```bash
+$ lambdabot -e "@unpl length . filter even"
+(\ x -> length (filter even x))
+```
+
+Alternativa web: [pointfree.io](https://pointfree.io/)
+
+
+
+
