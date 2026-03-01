@@ -343,6 +343,53 @@ xs = [2,3,4,5,6,7,8,9,10,11]
 
 ---
 
+# Tipus d'avaluació
+
+- .blue[*Call by value*] 
+
+  - s'avaluen el paràmetres d'una funció abans d'entrar a la funció
+
+  - *strict*, *inside-out*, ordre aplicatiu del λ-càlcul
+
+- .blue[*Call by name*] 
+
+  - les expressions no tenen perquè ser avaluades i, en alguns casos, mai seran avaluades
+
+  - *nonstrict*, *outside-in*, ordre normal del λ-càlcul
+
+- .blue[*Call by need*] 
+
+  - com l'anterior, però les expressions només s'avaluen una única vegada
+
+  - *nonstrict*, *outside-in*, GHC Haskell (la majoria dels casos)
+
+---
+
+# Exemple d'avaluació
+
+```haskell
+λ> import Debug.Trace
+
+λ> a = trace "a" 1::Int
+λ> a + a
+a
+2
+
+λ> :{
+λ| f x = b + x
+λ|   where
+λ|     b = trace "b" $ 2 * c
+λ|     c = trace "c" $ a + 1
+λ| :}
+
+λ> f 3
+b
+c
+7
+```
+
+---
+
 # Avaluació mandrosa pas a pas
 
 Donades les definicions (`nats` amb recursivitat infinita):
