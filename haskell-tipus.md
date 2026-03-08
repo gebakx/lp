@@ -935,11 +935,34 @@ Els tipus `Int`, `Integer`, `Float` i `Double` són instàncies de la classe `N
 
 # Classes base predefinides
 
+.cols5050[
+.col1[
 .center[
-![:scale 50%](figures/haskell/base-classes.png)
-]
+![:scale 95%](figures/haskell/base-classes.png)
+]]
+.col2[
+```haskell
+λ> a = 1
+
+λ> b = 0.5
+
+λ> :t a
+a :: Num a => a
+
+λ> :t b
+b :: Fractional a => a
+
+λ> a+b
+1.5
+
+λ> :t a+b
+a+b :: Fractional a => a
+```
+
+<br>
 
 Font: [Haskell/Classes and types](https://en.wikibooks.org/wiki/Haskell/Classes_and_types)
+]]
 
 ---
 
