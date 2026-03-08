@@ -190,7 +190,8 @@ c ≡ Int
 length :: [Int] -> Int
 
 f :: ([Int] -> [Int]) -> [Int] -> Int 
-f ??? length???
+f ??? length???  -- f és una funció que rep una funció g transformadora de 
+                 -- llistes i retorna la mida de la llista resultant.
 ```
 
 ---
@@ -204,10 +205,11 @@ f :: ([Int] -> [Int]) -> [Int] -> Int
 f = (length .)
 
 f (map id) [2,4,1]  👉  3
+f (filter even) [2,4,1]  👉  2
 ```
 
 ```haskell 
-numVegades x =  length . (filter . (==)) x
+numVegades x =  (length . (filter . (==))) x
 ```
 
 ```haskell 
