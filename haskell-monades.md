@@ -362,7 +362,7 @@ dins d'un contenidor. Els contenidors són genèrics i del mateix tipus.
 
 ---
 
-# Limitació dels Functors
+# Limitació dels functors
 
 Una de les limitacions dels functors és que només treballen amb funcions d'un únic paràmetre. 
 
