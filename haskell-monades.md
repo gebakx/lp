@@ -359,6 +359,35 @@ dins d'un contenidor. Els contenidors són genèrics i del mateix tipus.
 
 - `pure` construeix un contenidor amb un valor.
 
+
+---
+
+# Limitació dels Functors
+
+Una de les limitacions dels functors és que només treballen amb funcions d'un únic paràmetre. 
+
+```haskell
+λ> (+) (Just 3) (Just 2)     ❌
+```
+
+<br>
+
+Els aplicatius afegeixen la possibilitat de les aplicacions parcials:
+
+```haskell
+λ> (+) <$> Just 3 <*> Just 2       👉  Just 5
+```
+
+Fixeu-vos en que: `(+) <$> Just 3  👉  Just (+3)`
+
+<br>
+
+La funció `pure` ens pot servir per l'aplicació parcial sense utilitzar l'`fmap`:
+
+```haskell
+λ> pure (+) <*> Just 3 <*> Just 2       👉  Just 5
+```
+
 ---
 
 
