@@ -378,7 +378,7 @@ Els aplicatius afegeixen la possibilitat de les aplicacions parcials:
 λ> (+) <$> Just 3 <*> Just 2       👉  Just 5
 ```
 
-Fixeu-vos en que: `(+) <$> Just 3  👉  Just (+3)`
+Fixeu-vos en que: `(+) <$> Just 3  👉  Just ((+) 3)`
 
 <br>
 
