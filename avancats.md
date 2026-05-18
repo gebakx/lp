@@ -63,7 +63,7 @@ def f_tailrec(n, resultat = 1):
 ```
 ]]
 
-- **Tail Recursion Optimization**: optimització en que el compilador substitueix la crida per recursiva per un salt. 
+- **Tail Recursion Optimization**: optimització en que el compilador substitueix la crida recursiva per un salt. 
 
 - Python no ho suporta:
 
