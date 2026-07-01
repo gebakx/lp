@@ -84,28 +84,17 @@ class: left, middle, inverse
 ## Mètode d'avaluació
 
 La [Guia docent](https://www.fib.upc.edu/ca/estudis/graus/grau-en-enginyeria-informatica/pla-destudis/assignatures/LP)
-estableix aquesta avaluació: N = 0.5·F + 0.2·P1 + 0.2·P2 + 0.1·D,
+estableix aquesta avaluació: N = 0.5·F + 0.25·P1 + 0.25·P2,
 on:
 
 - P1 = nota de l'examen parcial (mitjans de curs)
 - P2 = nota de la pràctica (finals de curs)
-- D = nota del treball dirigit
 - F = nota de l'examen final
 
 El parcial serà un examen a Jutge.org sobre programació funcional en Haskell.
 
 La pràctica consisteix en utilitzar eines per generar compiladors i
-Python per a resoldre un cas pràctic.
-
-El treball dirigit consisteix en preparar un vídeo i un document escrit sobre
-les propietats d'un llenguatge de programació. S'usarà
-avaluació entre companys (co-avaluació). 
-
-Les qualificacions de les competències transversals s'obtenen del treball
-dirigit.
-
-**Nota:** Els repetidors poden reusar les seves notes
-del TD del curs passat.
+Python per a resoldre un cas pràctic. S'hauran de lliurar un informe i un vídeo que serviran per obtenir les qualificacions de les competències transversals.
 
 El final serà un examen escrit que avaluarà sobre *tots* els continguts
 del curs.
@@ -116,36 +105,32 @@ del curs.
 
 - Classes:
 
-    - Inici: dl 9 de febrer
+    - Inici: dl 7 de setembre
 
-    - Final: dv 29 de maig
+    - Final: dc 23 de desembre
 
 - Exàmens:
 
-    - Examen parcial: dv 10 d'abril
+    - Examen parcial: dv 30 d'octubre
         (10:30 - 12:30)
 
-    - Examen final: dl 8 de juny
-        (15:00 - 17:00)
+    - Examen final: dj 7 de gener
+        (9:00 - 11:00)
 
-- Treballs:
+- Pràctica:
 
-    - Lliurament pràctica: dl 1 de juny (08:00)
-
-    - Lliurament treball dirigit: dl 11 de maig (08:00)
-
-    - Correcció treball dirigit: dl 1 de juny (08:00)
+    - Lliurament: dj 7 de gener (08:00)
 
 ---
 
 # Bibliografia
 
+- *Concepts in programming languages*. Mitchell, J.C, Cambridge University Press, 2003.
+
 - *Compiler design*. Wilhelm, R.; Maurer, D, Addison-Wesley, 1995.
 
 - *Compilers: principles, techniques, and tools*. Aho, A.V.; Sethi, R.;
 Ullman, J.D, Addison-Wesley, 2007.
-
-- *Concepts in programming languages*. Mitchell, J.C, Cambridge University Press, 2003.
 
 - *Programming language pragmatics*. Scott, M.L, Morgan Kaufmann, 2009.
 
