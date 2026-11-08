@@ -62,35 +62,6 @@ Languages and Translators) i que el professor **Jordi Cortadella**
 de les transparències del professor **Fernando Orejas** (UPC).
 
 ---
-class: left, middle, inverse
-
-## Contingut
-
-- .brown[Introducció]
-
-- .cyan[Visió general]
-
-  - .cyan[Processadors de llenguatges]
-
-  - Sintaxi
-
-  - Semàntica
-
-  - Flux de compilació
-
-  - Eines
-
-- Anàlisi lèxica
-
-- Anàlisi sintàctica
-
-- Arbres de sintaxi abstracta
-
-- Anàlisi semàntica
-
-- Interpretació
-
----
 
 # Compiladors
 
@@ -273,6 +244,35 @@ def monte_carlo_pi(nsamples):
             acc += 1
     return 4.0 * acc / nsamples
 ```
+
+---
+class: left, middle, inverse
+
+## Contingut
+
+- .brown[Introducció]
+
+- .cyan[Visió general]
+
+  - .cyan[Processadors de llenguatges]
+
+  - Sintaxi
+
+  - Semàntica
+
+  - Flux de compilació
+
+  - Eines
+
+- Anàlisi lèxica
+
+- Anàlisi sintàctica
+
+- Arbres de sintaxi abstracta
+
+- Anàlisi semàntica
+
+- Interpretació
 
 ---
 
